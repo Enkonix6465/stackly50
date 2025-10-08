@@ -171,7 +171,7 @@ export default function Header() {
                     scrollToTop();
                   }}
                 >
-                  {translate('yogaMeditation')}
+                  {translate('residentialConstruction')}
                 </div>
                 <div 
                   className={`block px-4 py-3 text-base hover:bg-ice transition-colors duration-200 cursor-pointer ${isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-gray-100'}`} 
@@ -181,7 +181,7 @@ export default function Header() {
                     scrollToTop();
                   }}
                 >
-                  {translate('commercial')}
+                  {translate('commercialConstruction')}
                 </div>
                 <div 
                   className={`block px-4 py-3 text-base hover:bg-ice transition-colors duration-200 cursor-pointer ${isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-gray-100'}`} 
@@ -191,7 +191,7 @@ export default function Header() {
                     scrollToTop();
                   }}
                 >
-                  {translate('renovation')}
+                  {translate('renovationRemodeling')}
                 </div>
                 <div 
                   className={`block px-4 py-3 text-base hover:bg-ice transition-colors duration-200 cursor-pointer ${isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-gray-100'}`} 
@@ -211,7 +211,7 @@ export default function Header() {
                     scrollToTop();
                   }}
                 >
-                  {translate('industrial')}
+                  {translate('industrialConstruction')}
                 </div>
                 <div 
                   className={`block px-4 py-3 text-base hover:bg-ice transition-colors duration-200 cursor-pointer ${isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-gray-100'}`} 

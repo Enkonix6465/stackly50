@@ -6,6 +6,7 @@ import roadHeroVideo from '../../assets/roadhero.mp4';
 import roadBenefitsBg from '../../assets/road1.jpg';
 import roadSteps from '../../assets/road.jpg';
 import roadServe from '../../assets/road.jpg';
+import Footer from '../../footer.jsx';
 
 const RoadConstruction = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -414,6 +415,7 @@ const RoadConstruction = () => {
                </div>
              </div>
            </section>
+           <Footer />
     </div>
   );
 };

@@ -18,5 +18,17 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.rtl': {
+          direction: 'rtl',
+        },
+        '.ltr': {
+          direction: 'ltr',
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }

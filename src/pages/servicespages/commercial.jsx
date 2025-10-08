@@ -395,7 +395,7 @@ const CommercialConstruction = () => {
               data-aos-once="false"
               onClick={() => window.location.href='/contact'}
             >
-              {translate('getQuote')}
+              {translate('startProjectToday')}
             </button>
           </div>
         </div>
