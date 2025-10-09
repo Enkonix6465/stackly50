@@ -264,7 +264,7 @@ export default function Header() {
             
             {/* Language Dropdown Menu */}
             {isLanguageDropdownOpen && (
-              <div className={`absolute right-0 mt-2 w-40 border rounded-lg shadow-lg z-50 transition-colors duration-200 ${isDarkMode ? 'bg-gray-800 border-gray-600' : 'bg-white border-gray-200'}`}>
+              <div className={`absolute  -right-0 mt-2 w-40 border rounded-lg shadow-lg z-50 transition-colors duration-200 ${isDarkMode ? 'bg-gray-800 border-gray-600' : 'bg-white border-gray-200'}`}>
                 <div className="py-1">
                   <button
                     onClick={() => handleLanguageSelect('English')}

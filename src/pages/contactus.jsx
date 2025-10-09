@@ -3,6 +3,7 @@ import Header from "../Header";
 import Footer from "../footer";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { useScrollToTop } from "../hooks/useScrollToTop";
+import { useLanguage } from '../contexts/LanguageContext';
 import formSection from "../assets/formSection.jpg";
 import getInTouchVideo from "../assets/getInTouch.mp4";
 import globe from "../assets/globe.jpeg";
@@ -12,6 +13,7 @@ function ContactUs() {
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const { translate, isRTL } = useLanguage();
 
   // Scroll to top when component mounts
   useScrollToTop();
@@ -54,7 +56,7 @@ function ContactUs() {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'} ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
       {/* Section 1 */}
       <section className="w-full h-screen flex flex-col items-start justify-center relative overflow-hidden px-4 sm:px-6 md:px-8 lg:px-16">
@@ -74,15 +76,15 @@ function ContactUs() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-left max-w-4xl">
+        <div className={`relative z-10 max-w-4xl ${isRTL ? 'text-right' : 'text-left'}`}>
           <h1
             className="text-4xl md:text-5xl font-bold mb-4 transition-all duration-1000 ease-out animate-fade-in-up"
             style={{ color: "#FF4D00" }}
           >
-            Contact Our Construction Team
+            {translate('contactConstructionTeam')}
           </h1>
           <p className="text-lg md:text-xl max-w-2xl text-white/90 transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1">
-            Reach out to us for project inquiries, site visits, partnership opportunities, or any construction-related questions. Our team is ready to help you build safely and efficiently.
+            {translate('contactHeroDesc')}
           </p>
         </div>
       </section>
@@ -93,8 +95,8 @@ function ContactUs() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Phone Card */}
             <div className="bg-[#FF4D00] rounded-xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: '0s', animationDuration: '1s' }}>
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+              <div className={`flex items-start mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-12 h-12 bg-white/20 rounded-full flex items-center justify-center ${isRTL ? 'ml-4' : 'mr-4'}`}>
                   <svg
                     className="w-6 h-6"
                     fill="currentColor"
@@ -104,19 +106,19 @@ function ContactUs() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Call Our Office</h3>
+                  <h3 className="text-xl font-bold mb-2">{translate('callOurOffice')}</h3>
                   <p className="text-lg font-semibold">(+1) 555-987-6543</p>
                 </div>
               </div>
               <p className="text-white/80 text-sm">
-                Speak with our construction management team. Available Monday to Saturday, 8 AM to 7 PM for project support, safety concerns, and site coordination.
+                {translate('speakWithTeamDesc')}
               </p>
             </div>
 
             {/* Email Card */}
             <div className="bg-[#FF4D00] rounded-xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: '0.3s', animationDuration: '1s' }}>
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-[#FF4D00]/20 rounded-full flex items-center justify-center mr-4">
+              <div className={`flex items-start mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-12 h-12 bg-[#FF4D00]/20 rounded-full flex items-center justify-center ${isRTL ? 'ml-4' : 'mr-4'}`}>
                   <svg
                     className="w-6 h-6"
                     fill="currentColor"
@@ -126,19 +128,19 @@ function ContactUs() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Email Us</h3>
+                  <h3 className="text-xl font-bold mb-2">{translate('emailUs')}</h3>
                   <p className="text-lg font-semibold">stackly.com</p>
                 </div>
               </div>
               <p className="text-white text-sm">
-                Email us for project bids, material supply, safety documentation, or general construction inquiries. We respond within 1 business day.
+                {translate('emailUsDesc')}
               </p>
             </div>
 
             {/* Location Card */}
             <div className="bg-[#FF4D00] rounded-xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up" style={{ animationDelay: '0.6s', animationDuration: '1s' }}>
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+              <div className={`flex items-start mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-12 h-12 bg-white/20 rounded-full flex items-center justify-center ${isRTL ? 'ml-4' : 'mr-4'}`}>
                   <svg
                     className="w-6 h-6"
                     fill="currentColor"
@@ -148,12 +150,12 @@ function ContactUs() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Visit Our Office</h3>
-                  <p className="text-lg font-semibold">BuildRight Construction HQ</p>
+                  <h3 className="text-xl font-bold mb-2">{translate('visitOurOffice')}</h3>
+                  <p className="text-lg font-semibold">{translate('buildRightConstructionHQ')}</p>
                 </div>
               </div>
               <p className="text-white/80 text-sm">
-                Visit us for face-to-face consultations, project planning, or to discuss your construction needs. Our office is open to clients, partners, and suppliers.
+                {translate('visitOfficeDesc')}
               </p>
             </div>
           </div>
@@ -165,7 +167,7 @@ function ContactUs() {
         <div className="max-w-7xl mx-auto">
             {/* Main Title */}
             <h2 className="text-4xl md:text-5xl font-bold text-center text-white leading-tight mb-8">
-                Connect With Our Project Team
+                {translate('connectWithProjectTeam')}
               </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 h-[600px]">
             {/* Left Column - Image */}
@@ -186,61 +188,61 @@ function ContactUs() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-[#FF4D00] mb-2">
-                      First Name
+                      {translate('firstName')}
                     </label>
                                          <input
                      required
                        type="text"
                        className={`w-full px-4 py-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D00] focus:border-transparent ${isDarkMode ? 'text-black placeholder-black' : ''}`}
-                       placeholder="Enter your first name"
+                       placeholder={translate('enterFirstName')}
                      />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-[#FF4D00] mb-2">
-                      Last Name
+                      {translate('lastName')}
                     </label>
                                          <input
                      required
                        type="text"
                        className={`w-full px-4 py-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D00] focus:border-transparent ${isDarkMode ? 'text-black placeholder-black' : ''}`}
-                       placeholder="Enter your last name"
+                       placeholder={translate('enterLastName')}
                      />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-[#FF4D00] mb-2">
-                    Email
+                    {translate('email')}
                   </label>
                                      <input
                    required
                      type="email"
                      className={`w-full px-4 py-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D00] focus:border-transparent ${isDarkMode ? 'text-black placeholder-black' : ''}`}
-                     placeholder="Enter your email address"
+                     placeholder={translate('enterEmail')}
                    />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-[#FF4D00] mb-2">
-                    Phone
+                    {translate('phone')}
                   </label>
                                      <input
                    required
                      type="tel"
                      className={`w-full px-4 py-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D00] focus:border-transparent ${isDarkMode ? 'text-black placeholder-black' : ''}`}
-                     placeholder="Enter your phone number"
+                     placeholder={translate('enterPhone')}
                    />
                 </div>
 
                 <div>
                       <label className="block text-sm font-medium text-[#FF4D00] mb-2">
-                        Project Details
+                        {translate('projectDetails')}
                       </label>
                                          <textarea
                        required
                          rows="4"
                          className={`w-full px-4 py-3 border border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D00] focus:border-transparent ${isDarkMode ? 'text-black placeholder-black' : ''}`}
-                         placeholder="Describe your construction project, timeline, or request a site visit..."
+                         placeholder={translate('projectDetailsPlaceholder')}
                        ></textarea>
                 </div>
 
@@ -248,16 +250,16 @@ function ContactUs() {
                    type="submit"
                    className="w-full bg-[#FF4D00] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#e6440a] transition-colors"
                  >
-                   Send Message
+                   {translate('sendMessage')}
                  </button>
                  
                  {/* Success Notification */}
                  {messageSent && (
-                   <div className="mt-2 p-1 rounded-lg flex items-center" style={{ backgroundColor: '#FFE6E6', borderColor: '#FF4D00', border: '1px solid', color: '#FF4D00' }}>
-                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                   <div className={`mt-2 p-1 rounded-lg flex items-center ${isRTL ? 'flex-row-reverse' : ''}`} style={{ backgroundColor: '#FFE6E6', borderColor: '#FF4D00', border: '1px solid', color: '#FF4D00' }}>
+                     <svg className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="currentColor" viewBox="0 0 20 20">
                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                      </svg>
-                     <span className="font-medium">Thank you! Our construction team will contact you soon.</span>
+                     <span className="font-medium">{translate('thankYouMessage')}</span>
                    </div>
                  )}
                </form>
@@ -270,15 +272,15 @@ function ContactUs() {
        <section className={`w-full py-16 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#FF4D00] mb-4">Our Office & Site Locations</h2>
+            <h2 className="text-3xl font-bold text-[#FF4D00] mb-4">{translate('officeAndSiteLocations')}</h2>
           </div>
 
           {/* Three Cards on Top */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Business Hours Card */}
             <div className="bg-orange-50 border-2 border-[#FF4D00] rounded-xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center mr-3">
+              <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                   <svg
                     className="w-5 h-5 text-white"
                     fill="currentColor"
@@ -288,25 +290,25 @@ function ContactUs() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-[#FF4D00]">
-                  Office Hours
+                  {translate('officeHours')}
                 </h4>
               </div>
               <div className="space-y-2 text-[#FF4D00]/80">
                 <div className="flex justify-between">
-                  <span>Monday - Saturday</span>
+                  <span>{translate('mondaySaturday')}</span>
                   <span>8:00 AM - 7:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
+                  <span>{translate('sunday')}</span>
+                  <span>{translate('closed')}</span>
                 </div>
               </div>
             </div>
 
             {/* Getting Here Card */}
             <div className="bg-orange-50 border-2 border-[#FF4D00] rounded-xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center mr-3">
+              <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                   <svg
                     className="w-5 h-5 text-white"
                     fill="currentColor"
@@ -316,27 +318,27 @@ function ContactUs() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-[#FF4D00]">
-                  Getting Here
+                  {translate('gettingHere')}
                 </h4>
               </div>
               <div className="space-y-3 text-[#FF4D00]/80">
-                <div className="flex items-center">
+                <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
                 </div>
-                <span>Accessible by car, truck, and public transport. Parking available for clients and suppliers.</span>
+                <span>{translate('accessibleTransport')}</span>
               </div>
             </div>
 
             {/* Contact Info Card */}
             <div className="bg-orange-50 border-2 border-[#FF4D00] rounded-xl p-6 shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center mr-3">
+              <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                   <svg
                     className="w-5 h-5 text-white"
                     fill="currentColor"
@@ -346,13 +348,13 @@ function ContactUs() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-[#FF4D00]">
-                  Contact Info
+                  {translate('contactInfo')}
                 </h4>
               </div>
               <div className="space-y-3 text-[#FF4D00]/80">
-                <div className="flex items-center">
+                <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -360,9 +362,9 @@ function ContactUs() {
                   </svg>
                   <span>(+1) 555-987-6543</span>
                 </div>
-                <div className="flex items-center">
+                <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -370,15 +372,15 @@ function ContactUs() {
                   </svg>
                   <span>stackly.com</span>
                 </div>
-                <div className="flex items-center">
+                <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                   </svg>
-                  <span>BuildRight Construction HQ</span>
+                  <span>{translate('buildRightConstructionHQ')}</span>
                 </div>
               </div>
             </div>
@@ -404,7 +406,7 @@ function ContactUs() {
       <section className="w-full py-16 px-4 bg-[#e6440a]">
         <div className="max-w-7xl mx-auto">
             <h1 className="text-3xl font-bold text-center text-white mb-12">
-            Frequently Asked Construction Questions
+            {translate('frequentlyAskedConstructionQuestions')}
           </h1>
                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
  
@@ -426,10 +428,10 @@ function ContactUs() {
                        <div className={`${isDarkMode ? 'bg-black' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
                          <button
                            onClick={() => toggleFAQ(0)}
-                           className={`w-full px-6 py-4 text-left flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
+                           className={`w-full px-6 py-4 ${isRTL ? 'text-right' : 'text-left'} flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
                          >
                            <h3 className="text-lg font-bold text-[#e6440a]">
-                             What construction services do you provide?
+                             {translate('faq1Question')}
                            </h3>
                            <svg
                              className={`w-5 h-5 text-[#FF4D00] transition-transform duration-300 ${
@@ -448,7 +450,7 @@ function ContactUs() {
                          >
                            <div className="px-6 pb-4">
                              <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-                               We offer a full range of construction services including residential, commercial, and industrial building, renovations, site management, safety compliance, and project consulting.
+                               {translate('faq1Answer')}
                              </p>
                            </div>
                          </div>
@@ -458,10 +460,10 @@ function ContactUs() {
                <div className={`${isDarkMode ? 'bg-black' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
                  <button
                    onClick={() => toggleFAQ(1)}
-                   className={`w-full px-6 py-4 text-left flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
+                   className={`w-full px-6 py-4 ${isRTL ? 'text-right' : 'text-left'} flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
                  >
                    <h3 className="text-lg font-bold text-[#e6440a]">
-                     How long does a typical project take?
+                     {translate('faq2Question')}
                    </h3>
                    <svg
                      className={`w-5 h-5 text-[#FF4D00] transition-transform duration-300 ${
@@ -480,7 +482,7 @@ function ContactUs() {
                  >
                    <div className="px-6 pb-4">
                      <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-                       Project timelines vary based on scope and complexity. We provide a detailed schedule and keep you updated at every stage, from planning to completion.
+                       {translate('faq2Answer')}
                      </p>
                    </div>
                  </div>
@@ -490,10 +492,10 @@ function ContactUs() {
                <div className={`${isDarkMode ? 'bg-black' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
                  <button
                    onClick={() => toggleFAQ(2)}
-                   className={`w-full px-6 py-4 text-left flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
+                   className={`w-full px-6 py-4 ${isRTL ? 'text-right' : 'text-left'} flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
                  >
                    <h3 className="text-lg font-bold text-[#e6440a]">
-                     Do you handle permits and safety compliance?
+                     {translate('faq3Question')}
                    </h3>
                    <svg
                      className={`w-5 h-5 text-[#FF4D00] transition-transform duration-300 ${
@@ -512,7 +514,7 @@ function ContactUs() {
                  >
                    <div className="px-6 pb-4">
                      <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-                       Yes, we manage all necessary permits and ensure strict adherence to safety regulations and building codes for every project.
+                       {translate('faq3Answer')}
                      </p>
                    </div>
                  </div>
@@ -522,10 +524,10 @@ function ContactUs() {
                <div className={`${isDarkMode ? 'bg-black' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
                  <button
                    onClick={() => toggleFAQ(3)}
-                   className={`w-full px-6 py-4 text-left flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
+                   className={`w-full px-6 py-4 ${isRTL ? 'text-right' : 'text-left'} flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
                  >
                    <h3 className="text-lg font-bold text-[#e6440a]">
-                     Can I request a site visit or consultation?
+                     {translate('faq4Question')}
                    </h3>
                    <svg
                      className={`w-5 h-5 text-[#FF4D00] transition-transform duration-300 ${
@@ -554,10 +556,10 @@ function ContactUs() {
                <div className={`${isDarkMode ? 'bg-black' : 'bg-white'} rounded-xl shadow-lg overflow-hidden`}>
                  <button
                    onClick={() => toggleFAQ(4)}
-                   className={`w-full px-6 py-4 text-left flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
+                   className={`w-full px-6 py-4 ${isRTL ? 'text-right' : 'text-left'} flex items-center justify-between transition-colors ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-orange-50'}`}
                  >
                    <h3 className="text-lg font-bold text-[#e6440a]">
-                     How do I get started with a construction project?
+                     {translate('faq5Question')}
                    </h3>
                    <svg
                      className={`w-5 h-5 text-[#FF4D00] transition-transform duration-300 ${
@@ -592,11 +594,11 @@ function ContactUs() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-[#FF4D00] mb-4">
-              Stay Connected With BuildRight
+              {translate('stayConnectedWithBuildRight')}
             </h2>
-                         <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-white' : 'text-black'}`}>
-               Subscribe to our newsletter for construction industry updates, safety tips, and project highlights delivered to your inbox.
-             </p>
+            <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-white' : 'text-black'}`}>
+              {translate('newsletterDescription')}
+            </p>
           </div>
 
           <form className="space-y-6" onSubmit={handleNewsletterSubmit}>
@@ -605,7 +607,7 @@ function ContactUs() {
                 <input
                 required
                   type="text"
-                  placeholder="Full Name"
+                  placeholder={translate('fullName')}
                   className="w-full px-6 py-4 border-2 border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black placeholder-black"
                 />
               </div>
@@ -613,7 +615,7 @@ function ContactUs() {
                 <input
                 required
                   type="email"
-                  placeholder="Email Address"
+                  placeholder={translate('emailAddress')}
                   className="w-full px-6 py-4 border-2 border-black rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-black placeholder-black"
                 />
               </div>
@@ -627,7 +629,7 @@ function ContactUs() {
                   className="w-5 h-5 text-[#FF4D00] border-2 border-orange-200 rounded focus:ring-[#FF4D00]"
                 />
                                  <span className={`text-sm ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                   I agree to receive wellness updates and special offers
+                   {translate('agreeToReceiveUpdates')}
                  </span>
               </label>
             </div>
@@ -636,7 +638,7 @@ function ContactUs() {
               type="submit"
               className="w-full md:w-auto bg-[#FF4D00] text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-[#e6440a] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Subscribe to Newsletter
+              {translate('subscribeToNewsletter')}
             </button>
             
             {/* Newsletter Subscription Notification */}
@@ -645,7 +647,7 @@ function ContactUs() {
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-medium">Thank you for subscribing!</span>
+                <span className="font-medium">{translate('thankYouForSubscribing')}</span>
               </div>
             )}
           </form>

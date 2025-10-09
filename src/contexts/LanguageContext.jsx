@@ -612,7 +612,317 @@ const translations = {
     transformYourFacility: 'Transform Your Facility',
     industrialBenefitsCenterDesc: 'Experience the benefits of modern industrial construction—strength, efficiency, and innovation for your next project.',
     industrialConstructionSite: 'Industrial Construction Site',
-    viewPortfolio: 'View Portfolio'
+    viewPortfolio: 'View Portfolio',
+
+    // Road Construction Page translations
+    roadHeroTitle: 'Road & Infrastructure',
+    roadHeroTitleHighlight: 'Construction Services',
+    roadHeroDescription: 'Building the roads and infrastructure that connect communities, drive progress, and ensure a sustainable future.',
+    learnMoreAboutConstruction: 'Learn More About Construction',
+    
+    // Road Key Benefits
+    keyBenefits: 'Key Benefits',
+    roadKeyBenefitsDesc: 'Partner with us for reliable, innovative, and sustainable road and infrastructure construction solutions.',
+    qualityDurability: 'Quality & Durability',
+    qualityDurabilityDesc: 'We use the best materials and engineering practices to ensure long-lasting, safe, and reliable infrastructure.',
+    sustainability: 'Sustainability',
+    sustainabilityDesc: 'We prioritize eco-friendly methods and materials for a greener tomorrow.',
+    expertise: 'Expertise',
+    expertiseDesc: 'Our team brings decades of experience in road and infrastructure construction, ensuring every project meets the highest standards.',
+    onTimeDelivery: 'On-Time Delivery',
+    onTimeDeliveryDesc: 'We deliver projects on schedule, minimizing disruption and maximizing value for communities and clients.',
+    buildingTheFuture: 'Building the Future',
+    buildingTheFutureDesc: 'Our road and infrastructure projects are designed to last, supporting growth, safety, and connectivity for generations to come.',
+    
+    // Road Services
+    ourRoadInfrastructureServices: 'Our Road/Infrastructure Construction Services',
+    highwayRoadConstruction: 'Highway & Road Construction',
+    highwayRoadConstructionDesc: 'Design, construction, and maintenance of highways, roads, and expressways for safe and efficient transportation.',
+    bridgeOverpassConstruction: 'Bridge & Overpass Construction',
+    bridgeOverpassConstructionDesc: 'Expertise in building durable bridges and overpasses to enhance connectivity and support heavy traffic loads.',
+    urbanInfrastructureDevelopment: 'Urban Infrastructure Development',
+    urbanInfrastructureDevelopmentDesc: 'Comprehensive solutions for city infrastructure, including drainage, sidewalks, lighting, and public spaces.',
+    maintenanceRehabilitation: 'Maintenance & Rehabilitation',
+    maintenanceRehabilitationDesc: 'Ongoing maintenance, repair, and upgrades to extend the lifespan and safety of existing infrastructure.',
+    sustainableConstructionSolutions: 'Sustainable Construction Solutions',
+    sustainableConstructionSolutionsDesc: 'Utilizing eco-friendly materials and methods to minimize environmental impact and promote sustainability.',
+    projectManagementConsultation: 'Project Management & Consultation',
+    projectManagementConsultationDesc: 'End-to-end project management, consultation, and support for successful infrastructure delivery.',
+    
+    // Road How It Works
+    roadHowItWorksDesc: 'Our process ensures quality, safety, and efficiency at every stage of your infrastructure project.',
+    step1: 'Step 1',
+    step1Desc: 'Initial consultation and project assessment',
+    step2: 'Step 2',
+    step2Desc: 'Site survey, planning, and design development',
+    step3: 'Step 3',
+    step3Desc: 'Procurement of materials and mobilization of resources',
+    step4: 'Step 4',
+    step4Desc: 'Construction, supervision, and quality control',
+    step5: 'Step 5',
+    step5Desc: 'Project delivery, handover, and ongoing maintenance',
+    requestConsultation: 'Request a Consultation',
+    
+    // Road What Sets Us Apart
+    roadWhatSetsUsApartDesc: 'Discover why we are the trusted choice for road and infrastructure construction projects.',
+    provenTrackRecord: 'Proven Track Record: Successfully delivering complex infrastructure projects on time and within budget.',
+    cuttingEdgeTechnology: 'Cutting-Edge Technology: Leveraging the latest construction methods and equipment for superior results.',
+    commitmentToSafety: 'Commitment to Safety: Strict adherence to safety standards to protect our team and the community.',
+    sustainabilityFocus: 'Sustainability Focus: Eco-friendly practices and materials for a greener tomorrow.',
+    expertTeam: 'Expert Team: Highly skilled engineers, project managers, and workers dedicated to quality and excellence.',
+    innovativeSolutions: 'Innovative Solutions',
+    innovativeSolutionsDesc: 'We embrace innovation to solve infrastructure challenges and deliver lasting value.',
+    clientCentricApproach: 'Client-Centric Approach',
+    clientCentricApproachDesc: 'We prioritize client needs, ensuring transparent communication and tailored solutions.',
+    qualityAssurance: 'Quality Assurance',
+    qualityAssuranceDesc: 'Rigorous quality checks at every stage guarantee superior infrastructure outcomes.',
+    sustainableImpact: 'Sustainable Impact',
+    sustainableImpactDesc: 'We build with the future in mind, focusing on sustainability and community benefit.',
+    
+    // Road CTA
+    readyToBuildFuture: 'Ready to Build the Future?',
+    readyToBuildFutureDesc: 'Contact us today to discuss your road and infrastructure construction needs. Let\'s create lasting impact together.',
+    getInTouch: 'Get in Touch',
+
+    // Blog Page translations
+    constructionInsightsBlog: 'Construction Insights Blog',
+    blogHeroDesc: 'Explore the latest trends, safety tips, and innovations in the construction industry',
+    featuredConstructionArticles: 'Featured Construction Articles',
+    
+    // Featured Articles
+    essentialSafetyPractices: 'Essential Safety Practices for Every Construction Site',
+    safetyPracticesDesc: 'Learn the top safety protocols to keep your team and site secure on every project.',
+    safetyTeam: 'Safety Team',
+    minutesRead: 'min read',
+    daysAgo: 'd ago',
+    readMore: 'Read More',
+    
+    modernMaterials: 'Modern Materials: Building for the Future',
+    modernMaterialsDesc: 'Discover the latest innovations in construction materials and how they improve project outcomes.',
+    materialsTeam: 'Materials Team',
+    
+    projectManagementTools: 'Project Management Tools for Construction Success',
+    projectManagementToolsDesc: 'Explore the best digital tools and strategies for managing construction projects efficiently.',
+    projectTeam: 'Project Team',
+    
+    // Equipment Section
+    findRightConstructionEquipment: 'Find the Right Construction Equipment',
+    equipmentComparisonDesc: 'Compare different types of construction equipment to discover which one matches your project needs and site requirements',
+    equipmentType: 'Equipment Type',
+    purpose: 'Purpose',
+    bestFor: 'Best For',
+    keyFeatures: 'Key Features',
+    operatorSkill: 'Operator Skill',
+    
+    // Equipment Types
+    excavator: 'Excavator',
+    diggingDemolition: 'Digging, Demolition',
+    largeScaleEarthworks: 'Large-scale earthworks',
+    rotationPowerfulArm: '360° rotation, powerful arm',
+    advanced: 'Advanced',
+    
+    crane: 'Crane',
+    liftingHoisting: 'Lifting, Hoisting',
+    highRiseConstruction: 'High-rise construction',
+    tallReachHeavyLoads: 'Tall reach, heavy loads',
+    expert: 'Expert',
+    
+    bulldozer: 'Bulldozer',
+    pushingGrading: 'Pushing, Grading',
+    sitePreparation: 'Site preparation',
+    heavyBladeStrongTraction: 'Heavy blade, strong traction',
+    intermediate: 'Intermediate',
+    
+    loader: 'Loader',
+    loadingTransporting: 'Loading, Transporting',
+    movingMaterials: 'Moving materials',
+    largeBucketFastMovement: 'Large bucket, fast movement',
+    
+    concreteMixer: 'Concrete Mixer',
+    mixingConcrete: 'Mixing Concrete',
+    foundationWork: 'Foundation work',
+    rotatingDrumConsistentMix: 'Rotating drum, consistent mix',
+    basic: 'Basic',
+    
+    // Myths vs Facts Section
+    constructionSiteMythsVsFacts: 'Construction Site Myths vs Facts',
+    mythsFactsDesc: 'Let\'s debunk common construction site misconceptions with real, safety-focused facts.',
+    myths: 'Myths',
+    mythsDescription: 'Common misconceptions about construction sites and safety that many people believe to be true, but are actually myths that can put workers at risk.',
+    facts: 'Facts',
+    factsDescription: 'Real, safety-focused facts about construction sites that help keep everyone safe and projects running smoothly.',
+    
+    // Quiz Section
+    twoMinuteQuiz: '2 Minute Quiz',
+    question: 'Question',
+    of: 'of',
+    previous: '← Previous',
+    next: 'Next →',
+    seeResults: 'See Results',
+    quizResults: 'Quiz Results',
+    excellentKnowledge: 'Excellent! You have great wellness knowledge!',
+    goodKnowledge: 'Good job! You know your wellness basics!',
+    notBadKeepLearning: 'Not bad! Keep learning about wellness!',
+    keepLearningJourney: 'Keep learning! Wellness is a journey!',
+    takeQuizAgain: 'Take Quiz Again',
+    
+    // CTA Section
+    readyToStartNextProject: 'Ready to Start Your Next Project?',
+    ctaProjectDesc: 'Contact our team today for expert advice, quotes, or to discuss your construction needs. Let us help you build your vision safely and efficiently!',
+    contactUs: 'Contact Us',
+
+    // Contact Page translations
+    contactConstructionTeam: 'Contact Our Construction Team',
+    contactHeroDesc: 'Reach out to us for project inquiries, site visits, partnership opportunities, or any construction-related questions. Our team is ready to help you build safely and efficiently.',
+    
+    // Contact Cards
+    callOurOffice: 'Call Our Office',
+    speakWithTeamDesc: 'Speak with our construction management team. Available Monday to Saturday, 8 AM to 7 PM for project support, safety concerns, and site coordination.',
+    emailUs: 'Email Us',
+    emailUsDesc: 'Email us for project bids, material supply, safety documentation, or general construction inquiries. We respond within 1 business day.',
+    visitOurOffice: 'Visit Our Office',
+    buildRightConstructionHQ: 'BuildRight Construction HQ',
+    visitOfficeDesc: 'Visit us for face-to-face consultations, project planning, or to discuss your construction needs. Our office is open to clients, partners, and suppliers.',
+    
+    // Form Section
+    connectWithProjectTeam: 'Connect With Our Project Team',
+    firstName: 'First Name',
+    enterFirstName: 'Enter your first name',
+    lastName: 'Last Name',
+    enterLastName: 'Enter your last name',
+    email: 'Email',
+    enterEmail: 'Enter your email address',
+    phone: 'Phone',
+    enterPhone: 'Enter your phone number',
+    projectDetails: 'Project Details',
+    projectDetailsPlaceholder: 'Describe your construction project, timeline, or request a site visit...',
+    sendMessage: 'Send Message',
+    thankYouMessage: 'Thank you! Our construction team will contact you soon.',
+    
+    // Location Section
+    officeAndSiteLocations: 'Our Office & Site Locations',
+    officeHours: 'Office Hours',
+    mondaySaturday: 'Monday - Saturday',
+    sunday: 'Sunday',
+    closed: 'Closed',
+    gettingHere: 'Getting Here',
+    accessibleTransport: 'Accessible by car, truck, and public transport. Parking available for clients and suppliers.',
+    contactInfo: 'Contact Info',
+    buildRightConstructionHQ: 'BuildRight Construction HQ',
+    
+    // FAQ Section
+    frequentlyAskedConstructionQuestions: 'Frequently Asked Construction Questions',
+    faq1Question: 'What construction services do you provide?',
+    faq1Answer: 'We offer a full range of construction services including residential, commercial, and industrial building, renovations, site management, safety compliance, and project consulting.',
+    faq2Question: 'How long does a typical project take?',
+    faq2Answer: 'Project timelines vary based on scope and complexity. We provide a detailed schedule and keep you updated at every stage, from planning to completion.',
+    faq3Question: 'Do you handle permits and safety compliance?',
+    faq3Answer: 'Yes, we manage all necessary permits and ensure strict adherence to safety regulations and building codes for every project.',
+    faq4Question: 'Can I request a site visit or consultation?',
+    faq4Answer: 'Absolutely! Contact us to schedule a site visit or a project consultation. We\'ll assess your needs and provide expert recommendations.',
+    faq5Question: 'How do I get started with a construction project?',
+    faq5Answer: 'Just contact us by phone, email, or the form above. We\'ll discuss your requirements, provide a quote, and guide you through the next steps for your construction project.',
+    
+    // Newsletter Section
+    stayConnectedWithBuildRight: 'Stay Connected With BuildRight',
+    newsletterDescription: 'Subscribe to our newsletter for construction industry updates, safety tips, and project highlights delivered to your inbox.',
+    fullName: 'Full Name',
+    emailAddress: 'Email Address',
+    agreeToReceiveUpdates: 'I agree to receive wellness updates and special offers',
+    subscribeToNewsletter: 'Subscribe to Newsletter',
+    thankYouForSubscribing: 'Thank you for subscribing!',
+    
+    // Quiz Questions
+    quizQuestion1: 'What is the most important piece of safety equipment on a construction site?',
+    quizQ1Option1: 'Hard hat',
+    quizQ1Option2: 'Gloves', 
+    quizQ1Option3: 'Safety boots',
+    quizQ1Option4: 'All of the above',
+    
+    quizQuestion2: 'Which material is commonly used for building strong foundations?',
+    quizQ2Option1: 'Wood',
+    quizQ2Option2: 'Concrete',
+    quizQ2Option3: 'Plastic',
+    quizQ2Option4: 'Glass',
+    
+    quizQuestion3: 'What does PPE stand for?',
+    quizQ3Option1: 'Personal Protective Equipment',
+    quizQ3Option2: 'Project Planning Essentials',
+    quizQ3Option3: 'Powerful Performance Equipment',
+    quizQ3Option4: 'Professional Project Engineering',
+    
+    quizQuestion4: 'Which machine is used to lift heavy materials to great heights?',
+    quizQ4Option1: 'Bulldozer',
+    quizQ4Option2: 'Crane',
+    quizQ4Option3: 'Excavator',
+    quizQ4Option4: 'Loader',
+    
+    quizQuestion5: 'What is the main purpose of scaffolding?',
+    quizQ5Option1: 'Decoration',
+    quizQ5Option2: 'Support workers and materials',
+    quizQ5Option3: 'Lighting',
+    quizQ5Option4: 'Sound insulation',
+    
+    quizQuestion6: 'Which of these is a green building practice?',
+    quizQ6Option1: 'Using recycled materials',
+    quizQ6Option2: 'Wasting water',
+    quizQ6Option3: 'Ignoring insulation',
+    quizQ6Option4: 'Using only concrete',
+    
+    quizQuestion7: 'Who is responsible for site safety?',
+    quizQ7Option1: 'Site manager',
+    quizQ7Option2: 'Workers',
+    quizQ7Option3: 'Visitors',
+    quizQ7Option4: 'Everyone on site',
+    
+    quizQuestion8: 'What document outlines the steps and safety measures for a specific task?',
+    quizQ8Option1: 'Blueprint',
+    quizQ8Option2: 'Risk Assessment',
+    quizQ8Option3: 'Invoice',
+    quizQ8Option4: 'Permit',
+    
+    quizQuestion9: 'Which technology is transforming construction project planning?',
+    quizQ9Option1: 'BIM (Building Information Modeling)',
+    quizQ9Option2: 'Typewriters',
+    quizQ9Option3: 'Fax machines',
+    quizQ9Option4: 'Chalkboards',
+    
+    quizQuestion10: 'What is the first thing to do before starting any construction work?',
+    quizQ10Option1: 'Start digging',
+    quizQ10Option2: 'Check weather',
+    quizQ10Option3: 'Conduct a safety briefing',
+    quizQ10Option4: 'Order lunch',
+
+    // Myths and Facts content
+    myth1_1: 'Wearing a hard hat is only necessary when it\'s raining.',
+    myth1_2: 'All construction sites are equally dangerous.',
+    myth1_3: 'You don\'t need to read the safety manual if you have experience.',
+    myth1_4: 'Green building always costs more than traditional methods.',
+    
+    fact1_1: 'Hard hats are required at all times on active construction sites to protect from falling objects and head injuries.',
+    fact1_2: 'Risks vary by site, but proper safety protocols can make any site much safer.',
+    fact1_3: 'Every site and project is different; reading the safety manual is essential for everyone, regardless of experience.',
+    fact1_4: 'Green building can reduce costs over time through energy savings and incentives.',
+    
+    myth2_1: 'Scaffolding is safe as long as it looks stable.',
+    myth2_2: 'Permits are just paperwork and can be skipped if you\'re in a hurry.',
+    myth2_3: 'Only supervisors are responsible for safety on site.',
+    myth2_4: 'You can operate any equipment if you watch someone else do it first.',
+    
+    fact2_1: 'Scaffolding must be inspected regularly and meet safety standards before use.',
+    fact2_2: 'Permits are legally required and skipping them can result in fines or shutdowns.',
+    fact2_3: 'Safety is everyone\'s responsibility, from workers to supervisors.',
+    fact2_4: 'Proper training and certification are required to operate construction equipment safely.',
+    
+    myth3_1: 'Concrete just dries, it doesn\'t need to cure.',
+    myth3_2: 'Bigger machines are always better for every job.',
+    myth3_3: 'Safety meetings are a waste of time.',
+    myth3_4: 'Personal protective equipment (PPE) is optional if you\'re careful.',
+    
+    fact3_1: 'Concrete must cure properly to reach its full strength and durability.',
+    fact3_2: 'The right machine depends on the specific task and site conditions, not just size.',
+    fact3_3: 'Safety meetings help prevent accidents and keep everyone informed about site hazards.',
+    fact3_4: 'PPE is mandatory and protects against many common site injuries, regardless of experience.'
   },
   
   Arabic: {
@@ -1223,7 +1533,317 @@ const translations = {
     transformYourFacility: 'حول منشأتك',
     industrialBenefitsCenterDesc: 'اختبر فوائد البناء الصناعي الحديث—القوة والكفاءة والابتكار لمشروعك القادم.',
     industrialConstructionSite: 'موقع البناء الصناعي',
-    viewPortfolio: 'عرض المحفظة'
+    viewPortfolio: 'عرض المحفظة',
+
+    // Road Construction Page translations
+    roadHeroTitle: 'بناء الطرق والبنية التحتية',
+    roadHeroTitleHighlight: 'خدمات البناء',
+    roadHeroDescription: 'بناء الطرق والبنية التحتية التي تربط المجتمعات وتدفع التقدم وتضمن مستقبلاً مستداماً.',
+    learnMoreAboutConstruction: 'تعرف على المزيد حول البناء',
+    
+    // Road Key Benefits
+    keyBenefits: 'الفوائد الرئيسية',
+    roadKeyBenefitsDesc: 'تعاون معنا للحصول على حلول بناء الطرق والبنية التحتية الموثوقة والمبتكرة والمستدامة.',
+    qualityDurability: 'الجودة والمتانة',
+    qualityDurabilityDesc: 'نستخدم أفضل المواد والممارسات الهندسية لضمان بنية تحتية طويلة الأمد وآمنة وموثوقة.',
+    sustainability: 'الاستدامة',
+    sustainabilityDesc: 'نعطي الأولوية للطرق والمواد الصديقة للبيئة من أجل غد أكثر اخضراراً.',
+    expertise: 'الخبرة',
+    expertiseDesc: 'فريقنا يجلب عقوداً من الخبرة في بناء الطرق والبنية التحتية، مما يضمن تحقيق كل مشروع لأعلى المعايير.',
+    onTimeDelivery: 'التسليم في الوقت المحدد',
+    onTimeDeliveryDesc: 'نسلم المشاريع في الموعد المحدد، مما يقلل من الاضطراب ويزيد من القيمة للمجتمعات والعملاء.',
+    buildingTheFuture: 'بناء المستقبل',
+    buildingTheFutureDesc: 'مشاريع الطرق والبنية التحتية لدينا مصممة لتدوم، تدعم النمو والسلامة والاتصال للأجيال القادمة.',
+    
+    // Road Services
+    ourRoadInfrastructureServices: 'خدمات بناء الطرق/البنية التحتية لدينا',
+    highwayRoadConstruction: 'بناء الطرق السريعة والطرق',
+    highwayRoadConstructionDesc: 'تصميم وإنشاء وصيانة الطرق السريعة والطرق والطرق السريعة للنقل الآمن والفعال.',
+    bridgeOverpassConstruction: 'بناء الجسور والأنفاق العلوية',
+    bridgeOverpassConstructionDesc: 'خبرة في بناء جسور ومعابر علوية متينة لتعزيز الاتصال ودعم الأحمال المرورية الثقيلة.',
+    urbanInfrastructureDevelopment: 'تطوير البنية التحتية الحضرية',
+    urbanInfrastructureDevelopmentDesc: 'حلول شاملة لبنية المدينة التحتية، بما في ذلك الصرف والأرصفة والإضاءة والمساحات العامة.',
+    maintenanceRehabilitation: 'الصيانة والتأهيل',
+    maintenanceRehabilitationDesc: 'صيانة مستمرة وإصلاح وترقيات لتمديد عمر وسلامة البنية التحتية الموجودة.',
+    sustainableConstructionSolutions: 'حلول البناء المستدامة',
+    sustainableConstructionSolutionsDesc: 'استخدام مواد وطرق صديقة للبيئة لتقليل التأثير البيئي وتعزيز الاستدامة.',
+    projectManagementConsultation: 'إدارة المشاريع والاستشارة',
+    projectManagementConsultationDesc: 'إدارة المشاريع من البداية إلى النهاية والاستشارة والدعم لتسليم البنية التحتية بنجاح.',
+    
+    // Road How It Works
+    roadHowItWorksDesc: 'عمليتنا تضمن الجودة والسلامة والكفاءة في كل مرحلة من مراحل مشروع البنية التحتية الخاص بك.',
+    step1: 'الخطوة 1',
+    step1Desc: 'الاستشارة الأولية وتقييم المشروع',
+    step2: 'الخطوة 2',
+    step2Desc: 'مسح الموقع والتخطيط وتطوير التصميم',
+    step3: 'الخطوة 3',
+    step3Desc: 'شراء المواد وتعبئة الموارد',
+    step4: 'الخطوة 4',
+    step4Desc: 'البناء والإشراف ومراقبة الجودة',
+    step5: 'الخطوة 5',
+    step5Desc: 'تسليم المشروع والتسليم والصيانة المستمرة',
+    requestConsultation: 'طلب استشارة',
+    
+    // Road What Sets Us Apart
+    roadWhatSetsUsApartDesc: 'اكتشف لماذا نحن الخيار الموثوق لمشاريع بناء الطرق والبنية التحتية.',
+    provenTrackRecord: 'سجل حافل مثبت: تسليم ناجح لمشاريع البنية التحتية المعقدة في الوقت المحدد وضمن الميزانية.',
+    cuttingEdgeTechnology: 'التكنولوجيا المتطورة: الاستفادة من أحدث طرق البناء والمعدات للحصول على نتائج فائقة.',
+    commitmentToSafety: 'الالتزام بالسلامة: الالتزام الصارم بمعايير السلامة لحماية فريقنا والمجتمع.',
+    sustainabilityFocus: 'التركيز على الاستدامة: ممارسات ومواد صديقة للبيئة من أجل غد أكثر اخضراراً.',
+    expertTeam: 'فريق خبراء: مهندسون ومديرو مشاريع وعمال ماهرون مكرسون للجودة والتميز.',
+    innovativeSolutions: 'حلول مبتكرة',
+    innovativeSolutionsDesc: 'نحتضن الابتكار لحل تحديات البنية التحتية وتقديم قيمة دائمة.',
+    clientCentricApproach: 'نهج محوره العميل',
+    clientCentricApproachDesc: 'نعطي الأولوية لاحتياجات العملاء، مما يضمن التواصل الشفاف والحلول المخصصة.',
+    qualityAssurance: 'ضمان الجودة',
+    qualityAssuranceDesc: 'فحوصات الجودة الصارمة في كل مرحلة تضمن نتائج البنية التحتية الفائقة.',
+    sustainableImpact: 'التأثير المستدام',
+    sustainableImpactDesc: 'نبني مع وضع المستقبل في الاعتبار، مع التركيز على الاستدامة والمنفعة المجتمعية.',
+    
+    // Road CTA
+    readyToBuildFuture: 'مستعد لبناء المستقبل؟',
+    readyToBuildFutureDesc: 'اتصل بنا اليوم لمناقشة احتياجات بناء الطرق والبنية التحتية الخاصة بك. دعونا نخلق تأثيراً دائماً معاً.',
+    getInTouch: 'تواصل معنا',
+
+    // Blog Page translations
+    constructionInsightsBlog: 'مدونة رؤى البناء',
+    blogHeroDesc: 'استكشف أحدث الاتجاهات ونصائح السلامة والابتكارات في صناعة البناء',
+    featuredConstructionArticles: 'مقالات البناء المميزة',
+    
+    // Featured Articles
+    essentialSafetyPractices: 'الممارسات الأساسية للسلامة لكل موقع بناء',
+    safetyPracticesDesc: 'تعلم أهم بروتوكولات السلامة للحفاظ على أمان فريقك وموقعك في كل مشروع.',
+    safetyTeam: 'فريق السلامة',
+    minutesRead: 'دقيقة قراءة',
+    daysAgo: 'منذ يوم',
+    readMore: 'اقرأ المزيد',
+    
+    modernMaterials: 'المواد الحديثة: البناء للمستقبل',
+    modernMaterialsDesc: 'اكتشف أحدث الابتكارات في مواد البناء وكيف تحسن نتائج المشاريع.',
+    materialsTeam: 'فريق المواد',
+    
+    projectManagementTools: 'أدوات إدارة المشاريع لنجاح البناء',
+    projectManagementToolsDesc: 'استكشف أفضل الأدوات الرقمية والاستراتيجيات لإدارة مشاريع البناء بكفاءة.',
+    projectTeam: 'فريق المشروع',
+    
+    // Equipment Section
+    findRightConstructionEquipment: 'اعثر على معدات البناء المناسبة',
+    equipmentComparisonDesc: 'قارن بين أنواع مختلفة من معدات البناء لاكتشاف أيها يناسب احتياجات مشروعك ومتطلبات الموقع',
+    equipmentType: 'نوع المعدة',
+    purpose: 'الغرض',
+    bestFor: 'الأفضل لـ',
+    keyFeatures: 'الميزات الرئيسية',
+    operatorSkill: 'مهارة المشغل',
+    
+    // Equipment Types
+    excavator: 'حفارة',
+    diggingDemolition: 'الحفر، الهدم',
+    largeScaleEarthworks: 'أعمال ترابية واسعة النطاق',
+    rotationPowerfulArm: 'دوران 360 درجة، ذراع قوي',
+    advanced: 'متقدم',
+    
+    crane: 'رافعة',
+    liftingHoisting: 'الرفع، الرافعة',
+    highRiseConstruction: 'بناء المباني الشاهقة',
+    tallReachHeavyLoads: 'وصول عالي، أحمال ثقيلة',
+    expert: 'خبير',
+    
+    bulldozer: 'جرافة',
+    pushingGrading: 'الدفع، التسوية',
+    sitePreparation: 'تحضير الموقع',
+    heavyBladeStrongTraction: 'شفرة ثقيلة، جر قوي',
+    intermediate: 'متوسط',
+    
+    loader: 'محمل',
+    loadingTransporting: 'التحميل، النقل',
+    movingMaterials: 'نقل المواد',
+    largeBucketFastMovement: 'دلو كبير، حركة سريعة',
+    
+    concreteMixer: 'خلاطة خرسانة',
+    mixingConcrete: 'خلط الخرسانة',
+    foundationWork: 'أعمال الأساسات',
+    rotatingDrumConsistentMix: 'أسطوانة دوارة، خلط متسق',
+    basic: 'أساسي',
+    
+    // Myths vs Facts Section
+    constructionSiteMythsVsFacts: 'خرافات مواقع البناء مقابل الحقائق',
+    mythsFactsDesc: 'دعونا نفند المفاهيم الخاطئة الشائعة حول مواقع البناء بحقائق حقيقية تركز على السلامة.',
+    myths: 'خرافات',
+    mythsDescription: 'مفاهيم خاطئة شائعة حول مواقع البناء والسلامة يعتقد كثيرون أنها صحيحة، لكنها في الواقع خرافات قد تعرض العمال للخطر.',
+    facts: 'حقائق',
+    factsDescription: 'حقائق حقيقية تركز على السلامة حول مواقع البناء تساعد في الحفاظ على سلامة الجميع وسير المشاريع بسلاسة.',
+    
+    // Quiz Section
+    twoMinuteQuiz: 'اختبار دقيقتين',
+    question: 'سؤال',
+    of: 'من',
+    previous: '← السابق',
+    next: 'التالي →',
+    seeResults: 'عرض النتائج',
+    quizResults: 'نتائج الاختبار',
+    excellentKnowledge: 'ممتاز! لديك معرفة رائعة بالعافية!',
+    goodKnowledge: 'عمل جيد! تعرف أساسيات العافية!',
+    notBadKeepLearning: 'ليس سيئاً! استمر في تعلم العافية!',
+    keepLearningJourney: 'استمر في التعلم! العافية رحلة!',
+    takeQuizAgain: 'خذ الاختبار مرة أخرى',
+    
+    // CTA Section
+    readyToStartNextProject: 'مستعد لبدء مشروعك القادم؟',
+    ctaProjectDesc: 'اتصل بفريقنا اليوم للحصول على مشورة الخبراء أو عروض الأسعار أو لمناقشة احتياجات البناء الخاصة بك. دعنا نساعدك في بناء رؤيتك بأمان وكفاءة!',
+    contactUs: 'اتصل بنا',
+
+    // Contact Page translations
+    contactConstructionTeam: 'اتصل بفريق البناء لدينا',
+    contactHeroDesc: 'تواصل معنا للاستفسارات عن المشاريع وزيارات المواقع وفرص الشراكة أو أي أسئلة متعلقة بالبناء. فريقنا مستعد لمساعدتك في البناء بأمان وكفاءة.',
+    
+    // Contact Cards
+    callOurOffice: 'اتصل بمكتبنا',
+    speakWithTeamDesc: 'تحدث مع فريق إدارة البناء لدينا. متاحون من الاثنين إلى السبت، من 8 صباحًا إلى 7 مساءً لدعم المشاريع ومخاوف السلامة وتنسيق المواقع.',
+    emailUs: 'راسلنا عبر البريد الإلكتروني',
+    emailUsDesc: 'راسلنا عبر البريد الإلكتروني للحصول على عروض المشاريع وتوريد المواد والوثائق الأمنية أو الاستفسارات العامة حول البناء. نرد خلال يوم عمل واحد.',
+    visitOurOffice: 'زر مكتبنا',
+    buildRightConstructionHQ: 'مقر شركة بناء بيلدرايت',
+    visitOfficeDesc: 'زرنا للاستشارات وجهًا لوجه وتخطيط المشاريع أو لمناقشة احتياجات البناء الخاصة بك. مكتبنا مفتوح للعملاء والشركاء والموردين.',
+    
+    // Form Section
+    connectWithProjectTeam: 'تواصل مع فريق المشروع لدينا',
+    firstName: 'الاسم الأول',
+    enterFirstName: 'أدخل اسمك الأول',
+    lastName: 'الاسم الأخير',
+    enterLastName: 'أدخل اسمك الأخير',
+    email: 'البريد الإلكتروني',
+    enterEmail: 'أدخل عنوان بريدك الإلكتروني',
+    phone: 'الهاتف',
+    enterPhone: 'أدخل رقم هاتفك',
+    projectDetails: 'تفاصيل المشروع',
+    projectDetailsPlaceholder: 'اوصف مشروع البناء الخاص بك والجدول الزمني أو اطلب زيارة موقع...',
+    sendMessage: 'إرسال الرسالة',
+    thankYouMessage: 'شكرًا لك! سيتصل بك فريق البناء لدينا قريبًا.',
+    
+    // Location Section
+    officeAndSiteLocations: 'مواقع مكاتبنا ومواقعنا',
+    officeHours: 'ساعات العمل',
+    mondaySaturday: 'الاثنين - السبت',
+    sunday: 'الأحد',
+    closed: 'مغلق',
+    gettingHere: 'الوصول إلى هنا',
+    accessibleTransport: 'يمكن الوصول إليه بالسيارة والشاحنة والنقل العام. موقف سيارات متاح للعملاء والموردين.',
+    contactInfo: 'معلومات الاتصال',
+    buildRightConstructionHQ: 'مقر بيلدرايت للإنشاء',
+    
+    // FAQ Section
+    frequentlyAskedConstructionQuestions: 'أسئلة البناء المتداولة',
+    faq1Question: 'ما هي خدمات البناء التي تقدمونها؟',
+    faq1Answer: 'نحن نقدم مجموعة كاملة من خدمات البناء بما في ذلك البناء السكني والتجاري والصناعي والتجديدات وإدارة المواقع والامتثال للسلامة واستشارات المشاريع.',
+    faq2Question: 'كم من الوقت يستغرق المشروع النموذجي؟',
+    faq2Answer: 'تختلف الجداول الزمنية للمشاريع حسب النطاق والتعقيد. نقدم جدولًا زمنيًا مفصلًا ونبقيك على اطلاع في كل مرحلة، من التخطيط إلى الإنجاز.',
+    faq3Question: 'هل تتعاملون مع التصاريح والامتثال للسلامة؟',
+    faq3Answer: 'نعم، نحن نتولى جميع التصاريح اللازمة ونضمن الالتزام الصارم بلوائح السلامة وقوانين البناء لكل مشروع.',
+    faq4Question: 'هل يمكنني طلب زيارة موقع أو استشارة؟',
+    faq4Answer: 'بالطبع! اتصل بنا لجدولة زيارة موقع أو استشارة مشروع. سنقيم احتياجاتك ونقدم توصيات خبيرة.',
+    faq5Question: 'كيف أبدأ مع مشروع البناء؟',
+    faq5Answer: 'فقط اتصل بنا عبر الهاتف أو البريد الإلكتروني أو النموذج أعلاه. سنناقش متطلباتك ونقدم عرض أسعار ونرشدك خلال الخطوات التالية لمشروع البناء الخاص بك.',
+    
+    // Newsletter Section
+    stayConnectedWithBuildRight: 'ابق على تواصل مع بيلدرايت',
+    newsletterDescription: 'اشترك في نشرتنا الإخبارية لتحديثات صناعة البناء ونصائح السلامة وأبرز المشاريع المرسلة إلى صندوق البريد الوارد الخاص بك.',
+    fullName: 'الاسم الكامل',
+    emailAddress: 'عنوان البريد الإلكتروني',
+    agreeToReceiveUpdates: 'أوافق على تلقي تحديثات العافية والعروض الخاصة',
+    subscribeToNewsletter: 'اشترك في النشرة الإخبارية',
+    thankYouForSubscribing: 'شكرًا لك على الاشتراك!',
+    
+    // Quiz Questions
+    quizQuestion1: 'ما هو أهم قطعة من معدات السلامة في موقع البناء؟',
+    quizQ1Option1: 'خوذة صلبة',
+    quizQ1Option2: 'قفازات',
+    quizQ1Option3: 'أحذية السلامة',
+    quizQ1Option4: 'كل ما سبق',
+    
+    quizQuestion2: 'أي مادة تُستخدم عادة لبناء أسس قوية؟',
+    quizQ2Option1: 'خشب',
+    quizQ2Option2: 'خرسانة',
+    quizQ2Option3: 'بلاستيك',
+    quizQ2Option4: 'زجاج',
+    
+    quizQuestion3: 'ماذا يعني PPE؟',
+    quizQ3Option1: 'معدات الحماية الشخصية',
+    quizQ3Option2: 'أساسيات تخطيط المشروع',
+    quizQ3Option3: 'معدات الأداء القوي',
+    quizQ3Option4: 'الهندسة المهنية للمشاريع',
+    
+    quizQuestion4: 'أي آلة تُستخدم لرفع المواد الثقيلة إلى ارتفاعات عالية؟',
+    quizQ4Option1: 'جرافة',
+    quizQ4Option2: 'رافعة',
+    quizQ4Option3: 'حفارة',
+    quizQ4Option4: 'محمل',
+    
+    quizQuestion5: 'ما هو الغرض الرئيسي من السقالات؟',
+    quizQ5Option1: 'الزينة',
+    quizQ5Option2: 'دعم العمال والمواد',
+    quizQ5Option3: 'الإضاءة',
+    quizQ5Option4: 'عزل الصوت',
+    
+    quizQuestion6: 'أي من هذه ممارسة للبناء الأخضر؟',
+    quizQ6Option1: 'استخدام مواد معاد تدويرها',
+    quizQ6Option2: 'إهدار الماء',
+    quizQ6Option3: 'تجاهل العزل',
+    quizQ6Option4: 'استخدام الخرسانة فقط',
+    
+    quizQuestion7: 'من المسؤول عن السلامة في الموقع؟',
+    quizQ7Option1: 'مدير الموقع',
+    quizQ7Option2: 'العمال',
+    quizQ7Option3: 'الزوار',
+    quizQ7Option4: 'الجميع في الموقع',
+    
+    quizQuestion8: 'أي وثيقة تحدد الخطوات وتدابير السلامة لمهمة محددة؟',
+    quizQ8Option1: 'مخطط',
+    quizQ8Option2: 'تقييم المخاطر',
+    quizQ8Option3: 'فاتورة',
+    quizQ8Option4: 'تصريح',
+    
+    quizQuestion9: 'أي تقنية تحول تخطيط مشاريع البناء؟',
+    quizQ9Option1: 'نمذجة معلومات البناء (BIM)',
+    quizQ9Option2: 'آلات كاتبة',
+    quizQ9Option3: 'آلات فاكس',
+    quizQ9Option4: 'سبورات طباشيرية',
+    
+    quizQuestion10: 'ما هو أول شيء يجب فعله قبل بدء أي عمل بناء؟',
+    quizQ10Option1: 'بدء الحفر',
+    quizQ10Option2: 'فحص الطقس',
+    quizQ10Option3: 'إجراء إحاطة أمنية',
+    quizQ10Option4: 'طلب الغداء',
+
+    // Myths and Facts content
+    myth1_1: 'ارتداء الخوذة الصلبة ضروري فقط عندما تمطر.',
+    myth1_2: 'جميع مواقع البناء خطيرة بنفس الدرجة.',
+    myth1_3: 'لا تحتاج إلى قراءة دليل السلامة إذا كانت لديك خبرة.',
+    myth1_4: 'البناء الأخضر يكلف دائماً أكثر من الطرق التقليدية.',
+    
+    fact1_1: 'الخوذات الصلبة مطلوبة في جميع الأوقات في مواقع البناء النشطة للحماية من الأجسام المتساقطة وإصابات الرأس.',
+    fact1_2: 'المخاطر تختلف حسب الموقع، لكن بروتوكولات السلامة المناسبة يمكن أن تجعل أي موقع أكثر أماناً.',
+    fact1_3: 'كل موقع ومشروع مختلف؛ قراءة دليل السلامة ضرورية للجميع، بغض النظر عن الخبرة.',
+    fact1_4: 'البناء الأخضر يمكن أن يقلل التكاليف مع مرور الوقت من خلال توفير الطاقة والحوافز.',
+    
+    myth2_1: 'السقالات آمنة طالما أنها تبدو مستقرة.',
+    myth2_2: 'التصاريح مجرد أوراق يمكن تجاوزها إذا كنت في عجلة.',
+    myth2_3: 'المشرفون فقط مسؤولون عن السلامة في الموقع.',
+    myth2_4: 'يمكنك تشغيل أي معدة إذا شاهدت شخصاً آخر يفعل ذلك أولاً.',
+    
+    fact2_1: 'يجب فحص السقالات بانتظام وتلبية معايير السلامة قبل الاستخدام.',
+    fact2_2: 'التصاريح مطلوبة قانونياً وتجاوزها يمكن أن يؤدي إلى غرامات أو إغلاق.',
+    fact2_3: 'السلامة مسؤولية الجميع، من العمال إلى المشرفين.',
+    fact2_4: 'التدريب والشهادة المناسبة مطلوبة لتشغيل معدات البناء بأمان.',
+    
+    myth3_1: 'الخرسانة تجف فقط، لا تحتاج للمعالجة.',
+    myth3_2: 'الآلات الأكبر دائماً أفضل لكل عمل.',
+    myth3_3: 'اجتماعات السلامة مضيعة للوقت.',
+    myth3_4: 'معدات الحماية الشخصية (PPE) اختيارية إذا كنت حذراً.',
+    
+    fact3_1: 'يجب معالجة الخرسانة بشكل صحيح للوصول إلى قوتها ومتانتها الكاملة.',
+    fact3_2: 'الآلة المناسبة تعتمد على المهمة المحددة وظروف الموقع، وليس الحجم فقط.',
+    fact3_3: 'اجتماعات السلامة تساعد في منع الحوادث وإبقاء الجميع على علم بمخاطر الموقع.',
+    fact3_4: 'معدات الحماية الشخصية إلزامية وتحمي من العديد من إصابات الموقع الشائعة، بغض النظر عن الخبرة.'
   },
   
   Hebrew: {
@@ -1834,7 +2454,317 @@ const translations = {
     transformYourFacility: 'שנו את המתקן שלכם',
     industrialBenefitsCenterDesc: 'חוו את היתרונות של בנייה תעשייתית מודרנית—כוח, יעילות וחדשנות לפרויקט הבא שלכם.',
     industrialConstructionSite: 'אתר בנייה תעשייתית',
-    viewPortfolio: 'צפו בתיק העבודות'
+    viewPortfolio: 'צפו בתיק העבודות',
+
+    // Road Construction Page translations
+    roadHeroTitle: 'בניית כבישים ותשתיות',
+    roadHeroTitleHighlight: 'שירותי בנייה',
+    roadHeroDescription: 'בניית הכבישים והתשתיות המחברות קהילות, מניעות קידמה ומבטיחות עתיד בר-קיימא.',
+    learnMoreAboutConstruction: 'למדו עוד על בנייה',
+    
+    // Road Key Benefits
+    keyBenefits: 'יתרונות מרכזיים',
+    roadKeyBenefitsDesc: 'שתפו פעולה איתנו לפתרונות בניית כבישים ותשתיות אמינים, חדשניים וברי-קיימא.',
+    qualityDurability: 'איכות ועמידות',
+    qualityDurabilityDesc: 'אנו משתמשים בחומרים הטובים ביותר ובפרקטיקות הנדסיות כדי להבטיח תשתית ארוכת טווח, בטוחה ואמינה.',
+    sustainability: 'קיימות',
+    sustainabilityDesc: 'אנו נותנים עדיפות לשיטות וחומרים ידידותיים לסביבה למען מחר ירוק יותר.',
+    expertise: 'מומחיות',
+    expertiseDesc: 'הצוות שלנו מביא עשרות שנות ניסיון בבניית כבישים ותשתיות, המבטיח שכל פרויקט עומד בסטנדרטים הגבוהים ביותר.',
+    onTimeDelivery: 'מסירה בזמן',
+    onTimeDeliveryDesc: 'אנו מספקים פרויקטים בלוח הזמנים, ממזערים הפרעות ומגדילים את הערך לקהילות ולקוחות.',
+    buildingTheFuture: 'בניית העתיד',
+    buildingTheFutureDesc: 'פרויקטי הכבישים והתשתיות שלנו מתוכננים להחזיק מעמד, תומכים בצמיחה, בטיחות וקישוריות לדורות הבאים.',
+    
+    // Road Services
+    ourRoadInfrastructureServices: 'שירותי בניית כבישים/תשתיות שלנו',
+    highwayRoadConstruction: 'בניית כבישים מהירים וכבישים',
+    highwayRoadConstructionDesc: 'תכנון, בנייה ותחזוקה של כבישים מהירים, כבישים וכבישים מהירים לתחבורה בטוחה ויעילה.',
+    bridgeOverpassConstruction: 'בניית גשרים ומעברים עליונים',
+    bridgeOverpassConstructionDesc: 'מומחיות בבניית גשרים ומעברים עליונים עמידים לשיפור הקישוריות ותמיכה בעומסי תנועה כבדים.',
+    urbanInfrastructureDevelopment: 'פיתוח תשתית עירונית',
+    urbanInfrastructureDevelopmentDesc: 'פתרונות מקיפים לתשתית עירונית, כולל ניקוז, מדרכות, תאורה ומרחבים ציבוריים.',
+    maintenanceRehabilitation: 'תחזוקה ושיקום',
+    maintenanceRehabilitationDesc: 'תחזוקה שוטפת, תיקונים ושדרוגים להארכת חיי ובטיחות התשתית הקיימת.',
+    sustainableConstructionSolutions: 'פתרונות בנייה בת-קיימא',
+    sustainableConstructionSolutionsDesc: 'שימוש בחומרים ושיטות ידידותיות לסביבה כדי למזער את ההשפעה הסביבתית ולקדם קיימות.',
+    projectManagementConsultation: 'ניהול פרויקטים וייעוץ',
+    projectManagementConsultationDesc: 'ניהול פרויקטים מקצה לקצה, ייעוץ ותמיכה למסירת תשתית מוצלחת.',
+    
+    // Road How It Works
+    roadHowItWorksDesc: 'התהליך שלנו מבטיח איכות, בטיחות ויעילות בכל שלב של פרויקט התשתית שלכם.',
+    step1: 'שלב 1',
+    step1Desc: 'ייעוץ ראשוני והערכת פרויקט',
+    step2: 'שלב 2',
+    step2Desc: 'סקר אתר, תכנון ופיתוח עיצוב',
+    step3: 'שלב 3',
+    step3Desc: 'רכישת חומרים וגיוס משאבים',
+    step4: 'שלב 4',
+    step4Desc: 'בנייה, פיקוח ובקרת איכות',
+    step5: 'שלב 5',
+    step5Desc: 'מסירת פרויקט, העברה ותחזוקה שוטפת',
+    requestConsultation: 'בקש ייעוץ',
+    
+    // Road What Sets Us Apart
+    roadWhatSetsUsApartDesc: 'גלו למה אנחנו הבחירה המהימנה לפרויקטי בניית כבישים ותשתיות.',
+    provenTrackRecord: 'רקורד מוכח: מסירה מוצלחת של פרויקטי תשתית מורכבים בזמן ובתקציב.',
+    cuttingEdgeTechnology: 'טכנולוגיה מתקדמת: מינוף שיטות הבנייה והציוד העדכניים ביותר לתוצאות מעולות.',
+    commitmentToSafety: 'מחויבות לבטיחות: הקפדה קפדנית על תקני בטיחות להגנה על הצוות שלנו ועל הקהילה.',
+    sustainabilityFocus: 'התמקדות בקיימות: פרקטיקות וחומרים ידידותיים לסביבה למען מחר ירוק יותר.',
+    expertTeam: 'צוות מומחים: מהנדסים מיומנים מאוד, מנהלי פרויקטים ועובדים המוקדשים לאיכות ולמצוינות.',
+    innovativeSolutions: 'פתרונות חדשניים',
+    innovativeSolutionsDesc: 'אנו מאמצים חדשנות כדי לפתור אתגרי תשתית ולספק ערך מתמשך.',
+    clientCentricApproach: 'גישה ממוקדת לקוח',
+    clientCentricApproachDesc: 'אנו נותנים עדיפות לצרכי הלקוחות, מבטיחים תקשורת שקופה ופתרונות מותאמים.',
+    qualityAssurance: 'הבטחת איכות',
+    qualityAssuranceDesc: 'בדיקות איכות קפדניות בכל שלב מבטיחות תוצאות תשתית מעולות.',
+    sustainableImpact: 'השפעה בת-קיימא',
+    sustainableImpactDesc: 'אנו בונים עם המחשבה על העתיד, מתמקדים בקיימות ובתועלת קהילתית.',
+    
+    // Road CTA
+    readyToBuildFuture: 'מוכנים לבנות את העתיד?',
+    readyToBuildFutureDesc: 'צרו איתנו קשר היום כדי לדון בצרכי בניית הכבישים והתשתיות שלכם. בואו ניצור השפעה מתמשכת יחד.',
+    getInTouch: 'צרו קשר',
+
+    // Blog Page translations
+    constructionInsightsBlog: 'בלוג תובנות בנייה',
+    blogHeroDesc: 'חקרו את הטרנדים האחרונים, טיפי בטיחות וחדשנות בתעשיית הבנייה',
+    featuredConstructionArticles: 'מאמרי בנייה מומלצים',
+    
+    // Featured Articles
+    essentialSafetyPractices: 'נוהלי בטיחות חיוניים לכל אתר בנייה',
+    safetyPracticesDesc: 'למדו על הפרוטוקולים החשובים ביותר לשמירה על בטיחות הצוות והאתר בכל פרויקט.',
+    safetyTeam: 'צוות בטיחות',
+    minutesRead: 'דקות קריאה',
+    daysAgo: 'לפני יום',
+    readMore: 'קרא עוד',
+    
+    modernMaterials: 'חומרים מודרניים: בנייה לעתיד',
+    modernMaterialsDesc: 'גלו את החדשנות האחרונה בחומרי בנייה וכיצד הם משפרים תוצאות פרויקטים.',
+    materialsTeam: 'צוות חומרים',
+    
+    projectManagementTools: 'כלי ניהול פרויקטים להצלחת בנייה',
+    projectManagementToolsDesc: 'חקרו את הכלים הדיגיטליים והאסטרטגיות הטובים ביותר לניהול יעיל של פרויקטי בנייה.',
+    projectTeam: 'צוות פרויקט',
+    
+    // Equipment Section
+    findRightConstructionEquipment: 'מצאו את ציוד הבנייה הנכון',
+    equipmentComparisonDesc: 'השוו סוגים שונים של ציוד בנייה כדי לגלות איזה מתאים לצרכי הפרויקט ודרישות האתר שלכם',
+    equipmentType: 'סוג ציוד',
+    purpose: 'מטרה',
+    bestFor: 'הטוב ביותר עבור',
+    keyFeatures: 'תכונות מפתח',
+    operatorSkill: 'כישור מפעיל',
+    
+    // Equipment Types
+    excavator: 'מחפרון',
+    diggingDemolition: 'חפירה, הריסה',
+    largeScaleEarthworks: 'עבודות עפר בהיקף גדול',
+    rotationPowerfulArm: 'סיבוב 360 מעלות, זרוע חזקה',
+    advanced: 'מתקדם',
+    
+    crane: 'מנוף',
+    liftingHoisting: 'הרמה, הנפה',
+    highRiseConstruction: 'בניית מגדלים',
+    tallReachHeavyLoads: 'הגעה גבוהה, משאים כבדים',
+    expert: 'מומחה',
+    
+    bulldozer: 'דחפור',
+    pushingGrading: 'דחיפה, יישור',
+    sitePreparation: 'הכנת אתר',
+    heavyBladeStrongTraction: 'להב כבד, משיכה חזקה',
+    intermediate: 'בינוני',
+    
+    loader: 'מעמיס',
+    loadingTransporting: 'טעינה, הובלה',
+    movingMaterials: 'העברת חומרים',
+    largeBucketFastMovement: 'דלי גדול, תנועה מהירה',
+    
+    concreteMixer: 'מערבל בטון',
+    mixingConcrete: 'ערבוב בטון',
+    foundationWork: 'עבודות יסוד',
+    rotatingDrumConsistentMix: 'תוף מסתובב, ערבוב עקבי',
+    basic: 'בסיסי',
+    
+    // Myths vs Facts Section
+    constructionSiteMythsVsFacts: 'מיתוסים מול עובדות באתרי בנייה',
+    mythsFactsDesc: 'בואו נפריך תפיסות שגויות נפוצות על אתרי בנייה עם עובדות אמיתיות המתמקדות בבטיחות.',
+    myths: 'מיתוסים',
+    mythsDescription: 'תפיסות שגויות נפוצות על אתרי בנייה ובטיחות שאנשים רבים מאמינים שהן אמת, אך למעשה הן מיתוסים שיכולים לסכן עובדים.',
+    facts: 'עובדות',
+    factsDescription: 'עובדות אמיתיות המתמקדות בבטיחות על אתרי בנייה שעוזרות לשמור על בטיחות כולם ועל התקדמות חלקה של פרויקטים.',
+    
+    // Quiz Section
+    twoMinuteQuiz: 'חידון של שתי דקות',
+    question: 'שאלה',
+    of: 'מתוך',
+    previous: '← קודם',
+    next: 'הבא →',
+    seeResults: 'צפה בתוצאות',
+    quizResults: 'תוצאות החידון',
+    excellentKnowledge: 'מעולה! יש לך ידע נהדר על בריאות!',
+    goodKnowledge: 'עבודה טובה! אתה יודע את יסודות הבריאות!',
+    notBadKeepLearning: 'לא רע! המשך ללמוד על בריאות!',
+    keepLearningJourney: 'המשך ללמוד! בריאות היא מסע!',
+    takeQuizAgain: 'עשה את החידון שוב',
+    
+    // CTA Section
+    readyToStartNextProject: 'מוכנים להתחיל את הפרויקט הבא?',
+    ctaProjectDesc: 'צרו קשר עם הצוות שלנו היום לקבלת ייעוץ מקצועי, הצעות מחיר או לדיון בצרכי הבנייה שלכם. תנו לנו לעזור לכם לבנות את החזון שלכם בבטחה וביעילות!',
+    contactUs: 'צרו קשר',
+
+    // Contact Page translations
+    contactConstructionTeam: 'צרו קשר עם צוות הבנייה שלנו',
+    contactHeroDesc: 'פנו אלינו לבירורי פרויקטים, ביקורי אתרים, הזדמנויות שותפות או כל שאלה הקשורה לבנייה. הצוות שלנו מוכן לעזור לכם לבנות בבטחה וביעילות.',
+    
+    // Contact Cards
+    callOurOffice: 'התקשרו למשרד שלנו',
+    speakWithTeamDesc: 'דברו עם צוות ניהול הבנייה שלנו. זמינים מיום שני עד שבת, 8:00-19:00 לתמיכה בפרויקטים, חששות בטיחות ותיאום אתרים.',
+    emailUs: 'שלחו לנו אימייל',
+    emailUsDesc: 'שלחו לנו אימייל להצעות מחיר לפרויקטים, אספקת חומרים, תיעוד בטיחות או פניות כלליות בנושא בנייה. אנו מגיבים תוך יום עסקים אחד.',
+    visitOurOffice: 'בקרו במשרד שלנו',
+    buildRightConstructionHQ: 'מטה בילדרייט קונסטרקשן',
+    visitOfficeDesc: 'בקרו אצלנו לייעוצים פנים אל פנים, תכנון פרויקטים או לדיון בצרכי הבנייה שלכם. המשרד שלנו פתוח ללקוחות, שותפים וספקים.',
+    
+    // Form Section
+    connectWithProjectTeam: 'התחברו לצוות הפרויקט שלנו',
+    firstName: 'שם פרטי',
+    enterFirstName: 'הכניסו את השם הפרטי שלכם',
+    lastName: 'שם משפחה',
+    enterLastName: 'הכניסו את שם המשפחה שלכם',
+    email: 'אימייל',
+    enterEmail: 'הכניסו את כתובת האימייל שלכם',
+    phone: 'טלפון',
+    enterPhone: 'הכניסו את מספר הטלפון שלכם',
+    projectDetails: 'פרטי הפרויקט',
+    projectDetailsPlaceholder: 'תארו את פרויקט הבנייה שלכם, לוח זמנים או בקשו ביקור באתר...',
+    sendMessage: 'שלחו הודעה',
+    thankYouMessage: 'תודה! צוות הבנייה שלנו יצור איתכם קשר בקרוב.',
+    
+    // Location Section
+    officeAndSiteLocations: 'מיקומי המשרדים והאתרים שלנו',
+    officeHours: 'שעות המשרד',
+    mondaySaturday: 'יום שני - יום שבת',
+    sunday: 'יום ראשון',
+    closed: 'סגור',
+    gettingHere: 'להגיע לכאן',
+    accessibleTransport: 'נגיש ברכב, משאית ותחבורה ציבורית. חניה זמינה ללקוחות וספקים.',
+    contactInfo: 'פרטי קשר',
+    buildRightConstructionHQ: 'מטה בילדרייט קונסטרקשן',
+    
+    // FAQ Section
+    frequentlyAskedConstructionQuestions: 'שאלות נפוצות על בנייה',
+    faq1Question: 'אילו שירותי בנייה אתם מספקים?',
+    faq1Answer: 'אנו מציעים מגוון שלם של שירותי בנייה כולל בנייה למגורים, מסחרית ותעשייתית, שיפוצים, ניהול אתרים, ציות בטיחות וייעוץ פרויקטים.',
+    faq2Question: 'כמה זמן לוקח פרויקט טיפוסי?',
+    faq2Answer: 'לוחות זמנים של פרויקטים משתנים בהתאם להיקף ולמורכבות. אנו מספקים לוח זמנים מפורט ומעדכנים אתכם בכל שלב, מתכנון ועד השלמה.',
+    faq3Question: 'האם אתם מטפלים בהיתרים וציות בטיחות?',
+    faq3Answer: 'כן, אנו מנהלים את כל הרישיונות הנדרשים ומבטיחים הקפדה קפדנית על תקנות בטיחות וחוקי בנייה לכל פרויקט.',
+    faq4Question: 'האם אוכל לבקש ביקור באתר או ייעוץ?',
+    faq4Answer: 'בהחלט! צרו איתנו קשר לתיאום ביקור באתר או ייעוץ פרויקט. נעריך את הצרכים שלכם ונספק המלצות מומחים.',
+    faq5Question: 'איך מתחילים עם פרויקט בנייה?',
+    faq5Answer: 'פשוט צרו איתנו קשר בטלפון, אימייל או בטופס למעלה. נדון בדרישות שלכם, נספק הצעת מחיר ונדריך אתכם בשלבים הבאים לפרויקט הבנייה שלכם.',
+    
+    // Newsletter Section
+    stayConnectedWithBuildRight: 'הישארו מחוברים לבילדרייט',
+    newsletterDescription: 'הירשמו לניוזלטר שלנו לעדכונים על תעשיית הבנייה, טיפי בטיחות והדגשות פרויקטים שנשלחים לתיבת הדואר שלכם.',
+    fullName: 'שם מלא',
+    emailAddress: 'כתובת אימייל',
+    agreeToReceiveUpdates: 'אני מסכים לקבל עדכוני בריאות והצעות מיוחדות',
+    subscribeToNewsletter: 'הירשמו לניוזלטר',
+    thankYouForSubscribing: 'תודה על ההרשמה!',
+    
+    // Quiz Questions
+    quizQuestion1: 'מהי החתיכה החשובה ביותר של ציוד בטיחות באתר בנייה?',
+    quizQ1Option1: 'קסדה קשה',
+    quizQ1Option2: 'כפפות',
+    quizQ1Option3: 'נעלי בטיחות',
+    quizQ1Option4: 'כל האמור לעיל',
+    
+    quizQuestion2: 'איזה חומר נפוץ לשימוש לבניית יסודות חזקים?',
+    quizQ2Option1: 'עץ',
+    quizQ2Option2: 'בטון',
+    quizQ2Option3: 'פלסטיק',
+    quizQ2Option4: 'זכוכית',
+    
+    quizQuestion3: 'מה משמעותו של PPE?',
+    quizQ3Option1: 'ציוד הגנה אישי',
+    quizQ3Option2: 'יסודות תכנון פרויקט',
+    quizQ3Option3: 'ציוד ביצועים חזק',
+    quizQ3Option4: 'הנדסת פרויקטים מקצועית',
+    
+    quizQuestion4: 'איזו מכונה משמשת להרמת חומרים כבדים לגבהים?',
+    quizQ4Option1: 'דחפור',
+    quizQ4Option2: 'מנוף',
+    quizQ4Option3: 'מחפרון',
+    quizQ4Option4: 'מעמיס',
+    
+    quizQuestion5: 'מה המטרה העיקרית של פיגומים?',
+    quizQ5Option1: 'קישוט',
+    quizQ5Option2: 'תמיכה בעובדים וחומרים',
+    quizQ5Option3: 'תאורה',
+    quizQ5Option4: 'בידוד קול',
+    
+    quizQuestion6: 'איזה מאלה הוא נוהג בנייה ירוקה?',
+    quizQ6Option1: 'שימוש בחומרים ממוחזרים',
+    quizQ6Option2: 'בזבוז מים',
+    quizQ6Option3: 'התעלמות מבידוד',
+    quizQ6Option4: 'שימוש בבטון בלבד',
+    
+    quizQuestion7: 'מי אחראי על בטיחות האתר?',
+    quizQ7Option1: 'מנהל אתר',
+    quizQ7Option2: 'עובדים',
+    quizQ7Option3: 'מבקרים',
+    quizQ7Option4: 'כולם באתר',
+    
+    quizQuestion8: 'איזה מסמך מתאר את השלבים ואמצעי הבטיחות למשימה ספציפית?',
+    quizQ8Option1: 'תכנית',
+    quizQ8Option2: 'הערכת סיכונים',
+    quizQ8Option3: 'חשבונית',
+    quizQ8Option4: 'רישיון',
+    
+    quizQuestion9: 'איזו טכנולוגיה משנה תכנון פרויקטי בנייה?',
+    quizQ9Option1: 'מידול מידע בנייה (BIM)',
+    quizQ9Option2: 'מכונות כתיבה',
+    quizQ9Option3: 'מכונות פקס',
+    quizQ9Option4: 'לוחות גיר',
+    
+    quizQuestion10: 'מה הדבר הראשון לעשות לפני התחלת עבודת בנייה?',
+    quizQ10Option1: 'להתחיל לחפור',
+    quizQ10Option2: 'לבדוק מזג האוויר',
+    quizQ10Option3: 'לערוך תדרוך בטיחות',
+    quizQ10Option4: 'להזמין ארוחת צהריים',
+
+    // Myths and Facts content
+    myth1_1: 'חבישת קסדה נדרשת רק כשיורד גשם.',
+    myth1_2: 'כל אתרי הבנייה מסוכנים באותה מידה.',
+    myth1_3: 'אין צורך לקרוא את מדריך הבטיחות אם יש לך ניסיון.',
+    myth1_4: 'בנייה ירוקה תמיד עולה יותר משיטות מסורתיות.',
+    
+    fact1_1: 'קסדות נדרשות בכל עת באתרי בנייה פעילים כדי להגן מפני חפצים נופלים ופציעות ראש.',
+    fact1_2: 'הסיכונים משתנים לפי אתר, אבל פרוטוקולי בטיחות נכונים יכולים להפוך כל אתר לבטוח הרבה יותר.',
+    fact1_3: 'כל אתר ופרויקט שונה; קריאת מדריך הבטיחות חיונית לכולם, ללא קשר לניסיון.',
+    fact1_4: 'בנייה ירוקה יכולה להפחית עלויות עם הזמן באמצעות חיסכון באנרגיה ותמריצים.',
+    
+    myth2_1: 'פיגומים בטוחים כל עוד הם נראים יציבים.',
+    myth2_2: 'היתרים הם רק ניירת וניתן לדלג עליהם אם אתה ממהר.',
+    myth2_3: 'רק מפקחים אחראים לבטיחות באתר.',
+    myth2_4: 'אתה יכול להפעיל כל ציוד אם אתה רואה מישהו אחר עושה את זה קודם.',
+    
+    fact2_1: 'פיגומים חייבים להיבדק באופן קבוע ולעמוד בתקני בטיחות לפני השימוש.',
+    fact2_2: 'היתרים נדרשים חוקית ודילוג עליהם עלול להוביל לקנסות או סגירות.',
+    fact2_3: 'בטיחות היא אחריות של כולם, מעובדים ועד מפקחים.',
+    fact2_4: 'הכשרה והסמכה מתאימה נדרשת להפעלת ציוד בנייה בבטחה.',
+    
+    myth3_1: 'בטון פשוט מתייבש, הוא לא צריך התמצקות.',
+    myth3_2: 'מכונות גדולות יותר תמיד טובות יותר לכל עבודה.',
+    myth3_3: 'פגישות בטיחות הן בזבוז זמן.',
+    myth3_4: 'ציוד מגן אישי (PPE) הוא אופציונלי אם אתה זהיר.',
+    
+    fact3_1: 'בטון חייב להתמצק כראוי כדי להגיע לחוזק ועמידות מלאים.',
+    fact3_2: 'המכונה הנכונה תלויה במשימה הספציפית ובתנאי האתר, לא רק בגודל.',
+    fact3_3: 'פגישות בטיחות עוזרות למנוע תאונות ולשמור על כולם מעודכנים על סכנות האתר.',
+    fact3_4: 'ציוד מגן אישי הוא חובה ומגן מפני פציעות נפוצות באתר, ללא קשר לניסיון.'
   }
 };
 

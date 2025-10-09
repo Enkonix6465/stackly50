@@ -5,6 +5,7 @@ import Header from '../Header';
 import Footer from '../footer';
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { useScrollToTop } from "../hooks/useScrollToTop";
+import { useLanguage } from '../contexts/LanguageContext';
 import morningWellness from '../assets/road1.jpg';
 import mindfulMeditation from '../assets/homecta.jpg';
 import nutrition from '../assets/road.jpg';
@@ -14,6 +15,7 @@ import quizImage from '../assets/quiz.jpg';
 function Blog() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const navigate = useNavigate();
+  const { translate, isRTL } = useLanguage();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -164,53 +166,53 @@ function Blog() {
   // Construction Quiz Questions
   const quizQuestions = [
     {
-      question: "What is the most important piece of safety equipment on a construction site?",
-      options: ["Hard hat", "Gloves", "Safety boots", "All of the above"],
+      question: translate('quizQuestion1'),
+      options: [translate('quizQ1Option1'), translate('quizQ1Option2'), translate('quizQ1Option3'), translate('quizQ1Option4')],
       correct: 3
     },
     {
-      question: "Which material is commonly used for building strong foundations?",
-      options: ["Wood", "Concrete", "Plastic", "Glass"],
+      question: translate('quizQuestion2'),
+      options: [translate('quizQ2Option1'), translate('quizQ2Option2'), translate('quizQ2Option3'), translate('quizQ2Option4')],
       correct: 1
     },
     {
-      question: "What does PPE stand for?",
-      options: ["Personal Protective Equipment", "Project Planning Essentials", "Powerful Performance Equipment", "Professional Project Engineering"],
+      question: translate('quizQuestion3'),
+      options: [translate('quizQ3Option1'), translate('quizQ3Option2'), translate('quizQ3Option3'), translate('quizQ3Option4')],
       correct: 0
     },
     {
-      question: "Which machine is used to lift heavy materials to great heights?",
-      options: ["Bulldozer", "Crane", "Excavator", "Loader"],
+      question: translate('quizQuestion4'),
+      options: [translate('quizQ4Option1'), translate('quizQ4Option2'), translate('quizQ4Option3'), translate('quizQ4Option4')],
       correct: 1
     },
     {
-      question: "What is the main purpose of scaffolding?",
-      options: ["Decoration", "Support workers and materials", "Lighting", "Sound insulation"],
+      question: translate('quizQuestion5'),
+      options: [translate('quizQ5Option1'), translate('quizQ5Option2'), translate('quizQ5Option3'), translate('quizQ5Option4')],
       correct: 1
     },
     {
-      question: "Which of these is a green building practice?",
-      options: ["Using recycled materials", "Wasting water", "Ignoring insulation", "Using only concrete"],
+      question: translate('quizQuestion6'),
+      options: [translate('quizQ6Option1'), translate('quizQ6Option2'), translate('quizQ6Option3'), translate('quizQ6Option4')],
       correct: 0
     },
     {
-      question: "Who is responsible for site safety?",
-      options: ["Site manager", "Workers", "Visitors", "Everyone on site"],
+      question: translate('quizQuestion7'),
+      options: [translate('quizQ7Option1'), translate('quizQ7Option2'), translate('quizQ7Option3'), translate('quizQ7Option4')],
       correct: 3
     },
     {
-      question: "What document outlines the steps and safety measures for a specific task?",
-      options: ["Blueprint", "Risk Assessment", "Invoice", "Permit"],
+      question: translate('quizQuestion8'),
+      options: [translate('quizQ8Option1'), translate('quizQ8Option2'), translate('quizQ8Option3'), translate('quizQ8Option4')],
       correct: 1
     },
     {
-      question: "Which technology is transforming construction project planning?",
-      options: ["BIM (Building Information Modeling)", "Typewriters", "Fax machines", "Chalkboards"],
+      question: translate('quizQuestion9'),
+      options: [translate('quizQ9Option1'), translate('quizQ9Option2'), translate('quizQ9Option3'), translate('quizQ9Option4')],
       correct: 0
     },
     {
-      question: "What is the first thing to do before starting any construction work?",
-      options: ["Start digging", "Check weather", "Conduct a safety briefing", "Order lunch"],
+      question: translate('quizQuestion10'),
+      options: [translate('quizQ10Option1'), translate('quizQ10Option2'), translate('quizQ10Option3'), translate('quizQ10Option4')],
       correct: 2
     }
   ];
@@ -261,44 +263,44 @@ function Blog() {
   const mythsAndFacts = [
     {
       myth: [
-        "Wearing a hard hat is only necessary when it's raining.",
-        "All construction sites are equally dangerous.",
-        "You don't need to read the safety manual if you have experience.",
-        "Green building always costs more than traditional methods."
+        translate('myth1_1'),
+        translate('myth1_2'),
+        translate('myth1_3'),
+        translate('myth1_4')
       ],
       fact: [
-        "Hard hats are required at all times on active construction sites to protect from falling objects and head injuries.",
-        "Risks vary by site, but proper safety protocols can make any site much safer.",
-        "Every site and project is different; reading the safety manual is essential for everyone, regardless of experience.",
-        "Green building can reduce costs over time through energy savings and incentives."
+        translate('fact1_1'),
+        translate('fact1_2'),
+        translate('fact1_3'),
+        translate('fact1_4')
       ]
     },
     {
       myth: [
-        "Scaffolding is safe as long as it looks stable.",
-        "Permits are just paperwork and can be skipped if you're in a hurry.",
-        "Only supervisors are responsible for safety on site.",
-        "You can operate any equipment if you watch someone else do it first."
+        translate('myth2_1'),
+        translate('myth2_2'),
+        translate('myth2_3'),
+        translate('myth2_4')
       ],
       fact: [
-        "Scaffolding must be inspected regularly and meet safety standards before use.",
-        "Permits are legally required and skipping them can result in fines or shutdowns.",
-        "Safety is everyone's responsibility, from workers to supervisors.",
-        "Proper training and certification are required to operate construction equipment safely."
+        translate('fact2_1'),
+        translate('fact2_2'),
+        translate('fact2_3'),
+        translate('fact2_4')
       ]
     },
     {
       myth: [
-        "Concrete just dries, it doesn't need to cure.",
-        "Bigger machines are always better for every job.",
-        "Safety meetings are a waste of time.",
-        "Personal protective equipment (PPE) is optional if you're careful."
+        translate('myth3_1'),
+        translate('myth3_2'),
+        translate('myth3_3'),
+        translate('myth3_4')
       ],
       fact: [
-        "Concrete must cure properly to reach its full strength and durability.",
-        "The right machine depends on the specific task and site conditions, not just size.",
-        "Safety meetings help prevent accidents and keep everyone informed about site hazards.",
-        "PPE is mandatory and protects against many common site injuries, regardless of experience."
+        translate('fact3_1'),
+        translate('fact3_2'),
+        translate('fact3_3'),
+        translate('fact3_4')
       ]
     }
   ];
@@ -320,7 +322,7 @@ function Blog() {
   };
 
   return (
-  <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+  <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'} ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
       {/* Section 1 - Hero Section (Construction) */}
       <section className={`w-full h-screen relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-orange-50'}`}>
@@ -335,12 +337,12 @@ function Blog() {
           Your browser does not support the video tag.
         </video>
         {/* Content Overlay */}
-        <div className="relative z-10 h-full flex flex-col items-start justify-center text-left px-4 sm:px-6 md:px-8 lg:px-16">
+        <div className={`relative z-10 h-full flex flex-col ${isRTL ? 'items-end text-right' : 'items-start text-left'} justify-center px-4 sm:px-6 md:px-8 lg:px-16`}>
           <h1 className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ease-out animate-fade-in-up ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}> 
-            Construction Insights Blog
+            {translate('constructionInsightsBlog')}
           </h1>
           <p className={`text-xl md:text-2xl max-w-3xl transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}> 
-            Explore the latest trends, safety tips, and innovations in the construction industry
+            {translate('blogHeroDesc')}
           </p>
         </div>
       </section>
@@ -349,7 +351,7 @@ function Blog() {
       <section className={`w-full py-16 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto">
           <h2 className={`text-3xl font-bold text-center mb-12 transition-all duration-1000 ease-out animate-fade-in-up ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}> 
-            Featured Construction Articles
+            {translate('featuredConstructionArticles')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Featured Article Card 1 */}
@@ -363,25 +365,25 @@ function Blog() {
               </div>
               <div className="p-6">
                 <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}> 
-                  Essential Safety Practices for Every Construction Site
+                  {translate('essentialSafetyPractices')}
                 </h3>
                 <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}> 
-                  Learn the top safety protocols to keep your team and site secure on every project.
+                  {translate('safetyPracticesDesc')}
                 </p>
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                     <span className="text-[#FF4D00] text-sm font-bold">S</span>
                   </div>
                   <div className="flex-1">
-                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Safety Team</p>
-                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>2d ago • 5 min read</p>
+                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('safetyTeam')}</p>
+                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>2{translate('daysAgo')} • 5 {translate('minutesRead')}</p>
                   </div>
                 </div>
                 <button 
                   onClick={() => navigate('/article/safety-practices')}
                   className="text-[#FF4D00] font-semibold hover:text-[#e6440a] transition-colors"
                 >
-                  Read More →
+                  {translate('readMore')} {isRTL ? '←' : '→'}
                 </button>
               </div>
             </div>
@@ -397,25 +399,25 @@ function Blog() {
               </div>
               <div className="p-6">
                 <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}> 
-                  Modern Materials: Building for the Future
+                  {translate('modernMaterials')}
                 </h3>
                 <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}> 
-                  Discover the latest innovations in construction materials and how they improve project outcomes.
+                  {translate('modernMaterialsDesc')}
                 </p>
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                     <span className="text-purple-600 text-sm font-bold">M</span>
                   </div>
                   <div className="flex-1">
-                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Materials Team</p>
-                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>1d ago • 8 min read</p>
+                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('materialsTeam')}</p>
+                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>1{translate('daysAgo')} • 8 {translate('minutesRead')}</p>
                   </div>
                 </div>
                 <button 
                   onClick={() => navigate('/article/modern-materials')}
                   className="text-[#FF4D00] font-semibold hover:text-[#e6440a] transition-colors"
                 >
-                  Read More →
+                  {translate('readMore')} {isRTL ? '←' : '→'}
                 </button>
               </div>
             </div>
@@ -431,25 +433,25 @@ function Blog() {
               </div>
               <div className="p-6">
                 <h3 className={`text-xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}> 
-                  Project Management Tools for Construction Success
+                  {translate('projectManagementTools')}
                 </h3>
                 <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}> 
-                  Explore the best digital tools and strategies for managing construction projects efficiently.
+                  {translate('projectManagementToolsDesc')}
                 </p>
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                <div className={`flex items-center mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'}`}>
                     <span className="text-orange-600 text-sm font-bold">P</span>
                   </div>
                   <div className="flex-1">
-                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Project Team</p>
-                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>3d ago • 6 min read</p>
+                    <p className={`text-sm font-medium ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('projectTeam')}</p>
+                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>3{translate('daysAgo')} • 6 {translate('minutesRead')}</p>
                   </div>
                 </div>
                 <button 
                   onClick={() => navigate('/article/project-management')}
                   className="text-[#FF4D00] font-semibold hover:text-[#e6440a] transition-colors"
                 >
-                  Read More →
+                  {translate('readMore')} {isRTL ? '←' : '→'}
                 </button>
               </div>
             </div>
@@ -461,83 +463,83 @@ function Blog() {
       <section className={`w-full py-16 px-4 ${isDarkMode ? 'bg-[#FF4D00]' : 'bg-[#FF4D00]'}`}>
         <div className="max-w-7xl mx-auto">
           <h2 className={`text-3xl font-bold text-center mb-12 ${isDarkMode ? 'text-white' : 'text-teal-700'}`}> 
-            Find the Right Construction Equipment
+            {translate('findRightConstructionEquipment')}
           </h2>
           <p className={`text-lg text-center mb-12 max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-white'}`}> 
-            Compare different types of construction equipment to discover which one matches your project needs and site requirements
+            {translate('equipmentComparisonDesc')}
           </p>
           <div className="overflow-x-auto">
             <div className={`rounded-xl shadow-lg overflow-hidden ${isDarkMode ? 'bg-black' : 'bg-white'}`}> 
               <div className="min-w-full">
                 {/* Table Header */}
                 <div className={`grid grid-cols-5 gap-4 p-6 border-b-2 ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-orange-50 border-orange-200'}`}>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>Equipment Type</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>Purpose</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>Best For</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>Key Features</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>Operator Skill</div>
+                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('equipmentType')}</div>
+                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('purpose')}</div>
+                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('bestFor')}</div>
+                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('keyFeatures')}</div>
+                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('operatorSkill')}</div>
                 </div> {/* close Table Header */}
                 {/* Table Rows */}
                 <div className="divide-y divide-gray-200">
                   {/* Excavator Row */}
                   <div className={`grid grid-cols-5 gap-4 p-6 hover:bg-orange-50 transition-colors ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
                     <div className="flex items-center">
-                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Excavator</span>
+                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('excavator')}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Digging, Demolition</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('diggingDemolition')}</span>
                     </div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Large-scale earthworks</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>360° rotation, powerful arm</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Advanced</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('largeScaleEarthworks')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('rotationPowerfulArm')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('advanced')}</div>
                   </div>
                   {/* Crane Row */}
                   <div className={`grid grid-cols-5 gap-4 p-6 hover:bg-orange-50 transition-colors ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
                     <div className="flex items-center">
-                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Crane</span>
+                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('crane')}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Lifting, Hoisting</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('liftingHoisting')}</span>
                     </div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>High-rise construction</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Tall reach, heavy loads</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Expert</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('highRiseConstruction')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('tallReachHeavyLoads')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('expert')}</div>
                   </div>
                   {/* Bulldozer Row */}
                   <div className={`grid grid-cols-5 gap-4 p-6 hover:bg-orange-50 transition-colors ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
                     <div className="flex items-center">
-                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Bulldozer</span>
+                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('bulldozer')}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Pushing, Grading</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('pushingGrading')}</span>
                     </div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Site preparation</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Heavy blade, strong traction</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Intermediate</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('sitePreparation')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('heavyBladeStrongTraction')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('intermediate')}</div>
                   </div>
                   {/* Loader Row */}
                   <div className={`grid grid-cols-5 gap-4 p-6 hover:bg-orange-50 transition-colors ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
                     <div className="flex items-center">
-                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Loader</span>
+                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('loader')}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Loading, Transporting</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('loadingTransporting')}</span>
                     </div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Moving materials</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Large bucket, fast movement</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Intermediate</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('movingMaterials')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('largeBucketFastMovement')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('intermediate')}</div>
                   </div>
                   {/* Concrete Mixer Row */}
                   <div className={`grid grid-cols-5 gap-4 p-6 hover:bg-orange-50 transition-colors ${isDarkMode ? 'hover:bg-gray-700' : ''}`}>
                     <div className="flex items-center">
-                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Concrete Mixer</span>
+                      <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>{translate('concreteMixer')}</span>
                     </div>
                     <div className="flex items-center">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Mixing Concrete</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('mixingConcrete')}</span>
                     </div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Foundation work</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Rotating drum, consistent mix</div>
-                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Basic</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('foundationWork')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('rotatingDrumConsistentMix')}</div>
+                    <div className={`${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{translate('basic')}</div>
                   </div>
                 </div> {/* close Table Rows */}
               </div> {/* close min-w-full */}
@@ -551,10 +553,10 @@ function Blog() {
           {/* Section Header */}
           <div className="text-center mb-16 px-4 max-w-7xl mx-auto">
             <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>
-              Construction Site Myths vs Facts
+              {translate('constructionSiteMythsVsFacts')}
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Let's debunk common construction site misconceptions with real, safety-focused facts.
+              {translate('mythsFactsDesc')}
             </p>
           </div>
 
@@ -562,9 +564,9 @@ function Blog() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[600px]">
               {/* Left Column: Myths */}
               <div className="bg-gradient-to-b from-[#FF4D00] to-[#e6440a] p-12 flex flex-col justify-center">
-                <h3 className="text-4xl font-bold text-white mb-6">Myths</h3>
+                <h3 className="text-4xl font-bold text-white mb-6">{translate('myths')}</h3>
                 <p className="text-white text-lg mb-8 leading-relaxed">
-                  Common misconceptions about construction sites and safety that many people believe to be true, but are actually myths that can put workers at risk.
+                  {translate('mythsDescription')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -588,9 +590,9 @@ function Blog() {
 
               {/* Right Column: Facts */}
               <div className="bg-white p-12 flex flex-col justify-center">
-                <h3 className="text-4xl font-bold text-[#FF4D00] mb-6">Facts</h3>
+                <h3 className="text-4xl font-bold text-[#FF4D00] mb-6">{translate('facts')}</h3>
                 <p className="text-[#FF4D00] text-lg mb-8 leading-relaxed">
-                  Real, safety-focused facts about construction sites that help keep everyone safe and projects running smoothly.
+                  {translate('factsDescription')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -619,7 +621,7 @@ function Blog() {
   <section className={`w-full py-16 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}> 
         <div className="max-w-6xl mx-auto">
           <h2 className={`text-3xl font-bold text-center mb-12 ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>
-            2 Minute Quiz
+            {translate('twoMinuteQuiz')}
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
@@ -642,7 +644,7 @@ function Blog() {
                   <div className="mb-8">
                     <div className="flex justify-between items-center mb-2">
                       <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                        Question {currentQuestion + 1} of {quizQuestions.length}
+                        {translate('question')} {currentQuestion + 1} {translate('of')} {quizQuestions.length}
                       </span>
                       <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                         {Math.round(((currentQuestion + 1) / quizQuestions.length) * 100)}%
@@ -692,14 +694,14 @@ function Blog() {
                           : 'bg-[#FF4D00] text-white hover:bg-[#e6440a]'
                       }`}
                     >
-                      ← Previous
+                      {translate('previous')}
                     </button>
                     
                     <button
                       onClick={handleNext}
                       className="px-6 py-3 bg-[#FF4D00] text-white rounded-lg font-semibold hover:bg-[#e6440a] transition-colors"
                     >
-                      {currentQuestion === quizQuestions.length - 1 ? 'See Results' : 'Next →'}
+                      {currentQuestion === quizQuestions.length - 1 ? translate('seeResults') : translate('next')}
                     </button>
                   </div>
                 </div>
@@ -707,7 +709,7 @@ function Blog() {
                 /* Results Section */
                 <div className={`rounded-xl shadow-lg p-8 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                   <h3 className={`text-2xl font-bold text-center mb-6 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-                    Quiz Results
+                    {translate('quizResults')}
                   </h3>
                   
                   <div className="text-center mb-8">
@@ -715,10 +717,10 @@ function Blog() {
                       {calculateScore()}/{quizQuestions.length}
                     </div>
                     <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      {calculateScore() >= 8 ? 'Excellent! You have great wellness knowledge!' :
-                       calculateScore() >= 6 ? 'Good job! You know your wellness basics!' :
-                       calculateScore() >= 4 ? 'Not bad! Keep learning about wellness!' :
-                       'Keep learning! Wellness is a journey!'}
+                      {calculateScore() >= 8 ? translate('excellentKnowledge') :
+                       calculateScore() >= 6 ? translate('goodKnowledge') :
+                       calculateScore() >= 4 ? translate('notBadKeepLearning') :
+                       translate('keepLearningJourney')}
                     </p>
                   </div>
 
@@ -731,7 +733,7 @@ function Blog() {
                       }}
                       className="px-6 py-3 bg-[#FF4D00] text-white rounded-lg font-semibold hover:bg-[#e6440a] transition-colors"
                     >
-                      Take Quiz Again
+                      {translate('takeQuizAgain')}
                     </button>
                   </div>
                 </div>
@@ -743,9 +745,9 @@ function Blog() {
       {/* CTA Section */}
       <section className="w-full py-16 px-4 bg-gradient-to-r from-[#FF4D00] to-[#e6440a] flex justify-center items-center">
         <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-4">Ready to Start Your Next Project?</h2>
-          <p className="text-lg mb-8">Contact our team today for expert advice, quotes, or to discuss your construction needs. Let us help you build your vision safely and efficiently!</p>
-          <a href="/contact" className="inline-block px-8 py-4 bg-white text-[#FF4D00] font-bold rounded-lg shadow-lg hover:bg-orange-50 transition-colors text-lg">Contact Us</a>
+          <h2 className="text-4xl font-bold mb-4">{translate('readyToStartNextProject')}</h2>
+          <p className="text-lg mb-8">{translate('ctaProjectDesc')}</p>
+          <a href="/contact" className="inline-block px-8 py-4 bg-white text-[#FF4D00] font-bold rounded-lg shadow-lg hover:bg-orange-50 transition-colors text-lg">{translate('contactUs')}</a>
         </div>
       </section>
       <Footer />
