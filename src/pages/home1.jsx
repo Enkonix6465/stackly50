@@ -34,7 +34,7 @@ function Hero({ isDarkMode }) {
   return (
   <section
     ref={elementRef}
-    className={`w-full h-screen relative overflow-hidden flex flex-col items-start justify-center px-4 text-left transition-all duration-1000 ease-out ${
+    className={`w-full h-screen relative overflow-hidden flex flex-col items-center justify-center px-4 text-center transition-all duration-1000 ease-out ${
       isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
     }`}
   >
@@ -53,15 +53,15 @@ function Hero({ isDarkMode }) {
         }}
       />
       {/* Content */}
-  <div className={`relative z-20 flex flex-col pt-20 ${isRTL ? 'items-end text-right' : 'items-start text-left'} justify-center`}>
+  <div className={`relative z-20 flex flex-col pt-20 items-center text-center justify-center`}>
         <h1 className={`pt-2 text-6xl md:text-7xl font-extrabold text-white mb-8 drop-shadow transition-all duration-1000 ease-out ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-        }`}>
+        }`} style={{textAlign: 'center'}}>
           {translate('buildingYourFuture')}
         </h1>
         <p className={`text-2xl md:text-3xl text-white mb-12 max-w-2xl transition-all duration-1000 ease-out delay-300 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-        }`}>
+        }`} style={{textAlign: 'center'}}>
           {translate('heroDescription')}
         </p>
         <button 
@@ -171,7 +171,7 @@ function ServicesOverview({ isDarkMode }) {
     },
     {
       img: sleepImg,
-      title: translate("industrialConstruction"),
+      title: translate("industrialConstructionNoInfrastructure"),
       tagline: translate("industrialTagline"),
       details: translate("industrialDetails")
     }
@@ -372,136 +372,33 @@ function QuickTestimonialsPreview({ isDarkMode }) {
       style={{ background: '#e7dfd7' }}
     >
       <h2 className="text-2xl md:text-3xl font-bold text-[#FF4D00] mb-10 text-center">{translate('whatOurClientsSay')}</h2>
-      <div className="relative w-full max-w-6xl h-[700px] mx-auto">
-        {/* Card 1 - Top left */}
-        <div className={`absolute ${isRTL ? 'right-0' : 'left-0'} top-4 w-[270px] bg-white rounded-2xl shadow p-5 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user1} alt={translate('victoriaLinton')} className="w-12 h-12 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('victoriaLinton')}</div>
-            <div className="text-xs text-gray-500 mb-2">{translate('projectManager')}</div>
-            <div className="text-gray-800 text-sm mb-2">{translate('victoriaReview')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-        {/* Card 2 - Top center (main card) */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[340px] bg-white rounded-[30px] shadow-lg p-8 flex flex-col items-center text-center border border-gray-200" style={{zIndex:3}}>
-          <div className="-mt-14 mb-2">
-            <img src={user2} alt={translate('excellentJob')} className="w-20 h-20 rounded-full object-cover border-4 border-white shadow" />
-          </div>
-          <div className="font-bold text-2xl mb-2 text-black">{translate('excellentJob')}</div>
-          <div className="text-gray-700 text-base mb-2">{translate('fannyReview')}</div>
-          <div className="font-semibold text-lg mb-2 text-black">{translate('fannyOwen')}</div>
-          <div className="flex items-center gap-1 mb-2">
-            {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-          </div>
-        </div>
-        {/* Card 2a - Small card bottom left of main */}
-        <div className={`absolute ${isRTL ? 'right-[calc(50%-180px)]' : 'left-[calc(50%-180px)]'} top-[220px] w-[170px] bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center border border-gray-200`} style={{zIndex:2}}>
-          <img src={user1} alt={translate('topNotch')} className="w-10 h-10 rounded-full object-cover border-2 border-white shadow mb-2" />
-          <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('topNotch')}</div>
-          <div className="text-gray-700 text-xs mb-1">{translate('topNotchReview')}</div>
-          <div className="flex items-center gap-0.5 mb-1">
-            {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-base">★</span>))}
-          </div>
-        </div>
-        {/* Card 2b - Small card bottom right of main */}
-        <div className={`absolute ${isRTL ? 'right-[calc(50%+30px)]' : 'left-[calc(50%+30px)]'} top-[220px] w-[170px] bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center border border-gray-200`} style={{zIndex:2}}>
-          <img src={user3} alt={translate('recommended')} className="w-10 h-10 rounded-full object-cover border-2 border-white shadow mb-2" />
-          <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('recommended')}</div>
-          <div className="text-gray-700 text-xs mb-1">{translate('recommendedReview')}</div>
-          <div className="flex items-center gap-0.5 mb-1">
-            {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-base">★</span>))}
-          </div>
-        </div>
-        {/* Card 3 - Top right (styled like left) */}
-        <div className={`absolute ${isRTL ? 'left-0' : 'right-0'} top-8 w-[270px] bg-white rounded-2xl shadow p-5 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user2} alt={translate('clientReview')} className="w-12 h-12 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('clientReview')}</div>
-            <div className="text-xs text-gray-500 mb-2">@ArttuWatson</div>
-            <div className="text-gray-800 text-sm mb-2">{translate('clientReviewText')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-        {/* Card 4 - Middle left */}
-        <div className={`absolute ${isRTL ? 'right-0' : 'left-0'} top-56 w-[250px] bg-white rounded-xl shadow p-4 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user3} alt={translate('dmitriWoodhouse')} className="w-10 h-10 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="text-gray-800 text-sm mb-1">{translate('dmitriReview')}</div>
-            <div className="text-xs text-gray-500">{translate('dmitriWoodhouse')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(4)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-              {[...Array(1)].map((_, idx) => (<span key={idx} className="text-gray-300 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-
-        {/* Card 4b - Below the two stacked cards */}
-        <div className={`absolute ${isRTL ? 'right-0' : 'left-0'} top-[340px] w-[250px] bg-white rounded-xl shadow p-4 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user2} alt={translate('alexMorgan')} className="w-10 h-10 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('alexMorgan')}</div>
-            <div className="text-xs text-gray-500 mb-2">{translate('siteSupervisor')}</div>
-            <div className="text-gray-800 text-sm mb-2">{translate('alexReview')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-        {/* Card 5 - Middle right (styled like left) */}
-        <div className={`absolute ${isRTL ? 'left-0' : 'right-0'} top-56 w-[250px] bg-white rounded-2xl shadow p-5 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user1} alt={translate('nellyVane')} className="w-12 h-12 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('nellyVane')}</div>
-            <div className="text-xs text-gray-500 mb-2">{translate('interiorDesigner')}</div>
-            <div className="text-gray-800 text-sm mb-2">{translate('nellyReview')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-
-        {/* Card 5b - Below the two stacked cards on the right */}
-        <div className={`absolute ${isRTL ? 'left-0' : 'right-0'} top-[340px] w-[250px] bg-white rounded-2xl shadow p-5 flex gap-3 items-center`} style={{zIndex:2}}>
-          <img src={user3} alt={translate('priyaSharma')} className="w-12 h-12 rounded-full object-cover border-2 border-[#FF4D00]" />
-          <div className={isRTL ? 'text-right' : 'text-left'}>
-            <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('priyaSharma')}</div>
-            <div className="text-xs text-gray-500 mb-2">{translate('projectEngineer')}</div>
-            <div className="text-gray-800 text-sm mb-2">{translate('priyaReview')}</div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}
-            </div>
-          </div>
-        </div>
-        {/* Three more cards below the main card */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-[420px] flex flex-row gap-6" style={{zIndex:2}}>
-          {/* Card 6 */}
-          <div className="w-[200px] bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center border border-gray-200">
-            <img src={user2} alt={translate('greatSupport')} className="w-10 h-10 rounded-full object-cover border-2 border-white shadow mb-2" />
-            <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('greatSupport')}</div>
-            <div className="text-gray-700 text-xs mb-1">{translate('greatSupportReview')}</div>
-            <div className="flex items-center gap-0.5 mb-1">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-base">★</span>))}</div>
-          </div>
-          {/* Card 7 */}
-          <div className="w-[200px] bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center border border-gray-200">
-            <img src={user3} alt={translate('impressiveResults')} className="w-10 h-10 rounded-full object-cover border-2 border-white shadow mb-2" />
-            <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('impressiveResults')}</div>
-            <div className="text-gray-700 text-xs mb-1">{translate('impressiveResultsReview')}</div>
-            <div className="flex items-center gap-0.5 mb-1">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-base">★</span>))}</div>
-          </div>
-          {/* Card 8 */}
-          <div className="w-[200px] bg-white rounded-2xl shadow p-4 flex flex-col items-center text-center border border-gray-200">
-            <img src={user1} alt={translate('professionalTeam')} className="w-10 h-10 rounded-full object-cover border-2 border-white shadow mb-2" />
-            <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('professionalTeam')}</div>
-            <div className="text-gray-700 text-xs mb-1">{translate('professionalTeamReview')}</div>
-            <div className="flex items-center gap-0.5 mb-1">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-base">★</span>))}</div>
-          </div>
-        </div>
-      </div>
+  <div className="w-full flex flex-row justify-center gap-8">
+    {/* Card 1 */}
+    <div className="w-[300px] bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center border border-gray-200">
+      <img src={user1} alt={translate('victoriaLinton')} className="w-16 h-16 rounded-full object-cover border-2 border-[#FF4D00] mb-2" />
+      <div className="font-bold text-[#b89c6c] text-base mb-1">{translate('victoriaLinton')}</div>
+      <div className="text-xs text-gray-500 mb-2">{translate('projectManager')}</div>
+      <div className="text-gray-800 text-sm mb-2">{translate('victoriaReview')}</div>
+      <div className="flex items-center gap-1 mb-2">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}</div>
+    </div>
+    {/* Card 2 */}
+    <div className="w-[300px] bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center border border-gray-200">
+      <img src={user2} alt={translate('excellentJob')} className="w-16 h-16 rounded-full object-cover border-2 border-[#FF4D00] mb-2" />
+      <div className="font-bold text-2xl mb-2 text-black">{translate('excellentJob')}</div>
+      <div className="text-gray-700 text-base mb-2">{translate('fannyReview')}</div>
+      <div className="font-semibold text-lg mb-2 text-black">{translate('fannyOwen')}</div>
+      <div className="flex items-center gap-1 mb-2">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}</div>
+    </div>
+    {/* Card 3 */}
+    <div className="w-[300px] bg-white rounded-2xl shadow p-6 flex flex-col items-center text-center border border-gray-200">
+  <img src={user3} alt={translate('recommended')} className="w-16 h-16 rounded-full object-cover border-2 border-[#FF4D00] mb-2" />
+  <div className="font-bold text-xs text-[#b89c6c] mb-1">{translate('recommended')}</div>
+  <div className="text-gray-700 text-xs mb-1">{translate('recommendedReview')}</div>
+  <div className="text-gray-600 text-sm mb-1">{translate('commercialExpertiseDesc2')}</div>
+  <div className="text-gray-600 text-sm mb-1">{translate('commercialExpertiseDesc3')}</div>
+  <div className="flex items-center gap-1 mb-2">{[...Array(5)].map((_, idx) => (<span key={idx} className="text-yellow-400 text-lg">★</span>))}</div>
+    </div>
+  </div>
     </section>
   );
 }

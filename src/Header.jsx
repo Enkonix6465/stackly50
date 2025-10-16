@@ -107,19 +107,19 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 w-full shadow-md transition-colors duration-300 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 py-1 flex items-center justify-between">
         {/* Logo - Left Side */}
         <div className="flex items-center">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="LIFE Logo" className="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
+            <img src={logo} alt="LIFE Logo" className="w-20 h-12 sm:w-28 sm:h-16 object-contain" />
           </div>
         </div>
 
         {/* Desktop Navigation - Right Side with Equal Gaps */}
-        <nav className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-12`}>
+  <nav className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse' : ''} space-x-6`}>
           <div className="relative">
             <button
-              className={`text-lg font-semibold hover:text-[#FF4D00] flex items-center gap-1 focus:outline-none transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`text-base font-semibold hover:text-[#FF4D00] flex items-center gap-1 focus:outline-none transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`}
               onClick={() => setHomeDropdown((open) => !open)}
             >
               {translate('home')}
@@ -134,10 +134,10 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link to="/about" className={`text-lg font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('aboutUs')}</Link>
+          <Link to="/about" className={`text-base font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('aboutUs')}</Link>
           <div className="relative">
             <button
-              className={`text-lg font-semibold hover:text-[#FF4D00] flex items-center gap-1 focus:outline-none transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`}
+              className={`text-base font-semibold hover:text-[#FF4D00] flex items-center gap-1 focus:outline-none transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`}
               onClick={() => { navigate('/services'); scrollToTop(); }}
               onMouseEnter={handleServicesMouseEnter}
               onMouseLeave={handleServicesMouseLeave}
@@ -226,21 +226,21 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link to="/blog" className={`text-lg font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('blog')}</Link>
-          <Link to="/contact" className={`text-lg font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('contactUs')}</Link>
+          <Link to="/blog" className={`text-base font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('blog')}</Link>
+          <Link to="/contact" className={`text-base font-semibold hover:text-[#FF4D00] transition-colors duration-200 ${isDarkMode ? 'text-white' : 'text-black'}`} onClick={scrollToTop}>{translate('contactUs')}</Link>
           
           {/* Dark Mode Toggle Button */}
           <button
             onClick={toggleDarkMode}
-            className={`p-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}
+            className={`p-2 rounded-lg transition-colors duration-200 bg-[#FF4D00] hover:bg-[#e6440a]`}
             title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           >
             {isDarkMode ? (
-              <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
               </svg>
             ) : (
-              <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
               </svg>
             )}
@@ -250,7 +250,7 @@ export default function Header() {
           <div className="relative language-dropdown">
             <button
               onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-              className={`p-2 rounded-lg transition-colors duration-200 flex items-center space-x-1 ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-600'}`}
+              className={`p-2 rounded-lg transition-colors duration-200 flex items-center space-x-1 bg-[#FF4D00] hover:bg-[#e6440a] text-white`}
               title="Select Language"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -308,7 +308,7 @@ export default function Header() {
           <div className="relative avatar-dropdown">
             <div 
               onClick={() => setIsAvatarDropdownOpen(!isAvatarDropdownOpen)}
-              className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center text-white font-bold text-base cursor-pointer hover:bg-[#e6440a] transition-colors duration-200"
+              className="w-8 h-8 bg-[#FF4D00] rounded-full flex items-center justify-center text-white font-bold text-sm cursor-pointer hover:bg-[#e6440a] transition-colors duration-200"
             >
               {initials}
             </div>
@@ -337,19 +337,19 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center space-x-3">
+  <div className="lg:hidden flex items-center space-x-2">
           {/* Dark Mode Toggle Button for Mobile */}
           <button
             onClick={toggleDarkMode}
-            className={`p-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'}`}
+            className={`p-2 rounded-lg transition-colors duration-200 bg-[#FF4D00] hover:bg-[#e6440a]`}
             title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           >
             {isDarkMode ? (
-              <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
               </svg>
             ) : (
-              <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
               </svg>
             )}
@@ -359,7 +359,7 @@ export default function Header() {
           <div className="relative language-dropdown">
             <button
               onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-              className={`p-2 rounded-lg transition-colors duration-200 flex items-center space-x-1 ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-600'}`}
+              className={`p-2 rounded-lg transition-colors duration-200 flex items-center space-x-1 bg-[#FF4D00] hover:bg-[#e6440a] text-white`}
               title="Select Language"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -429,8 +429,8 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className={`lg:hidden border-t ${isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}`}>
-          <div className="px-4 py-6 space-y-4">
+        <div className={`lg:hidden border-t ${isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}`}> 
+          <div className="px-2 py-3 space-y-2">
             {/* Home Dropdown */}
             <div>
               <button
@@ -443,18 +443,18 @@ export default function Header() {
                 </svg>
               </button>
               {homeDropdown && (
-                <div className="ml-4 mt-2 space-y-2">
+                <div className="ml-2 mt-1 space-y-1">
                   <Link 
                     to="/home1" 
                     onClick={closeMobileMenu}
-                    className={`block py-2 px-4 rounded-lg transition-colors duration-200 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`}
+                    className={`block py-1 px-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`}
                   >
                     Home1
                   </Link>
                   <Link 
                     to="/home2" 
                     onClick={closeMobileMenu}
-                    className={`block py-2 px-4 rounded-lg transition-colors duration-200 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`}
+                    className={`block py-1 px-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'}`}
                   >
                     Home2
                   </Link>
@@ -466,7 +466,7 @@ export default function Header() {
             <Link 
               to="/about" 
               onClick={closeMobileMenu}
-              className={`block py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
+              className={`block py-2 px-2 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
             >
               {translate('aboutUs')}
             </Link>
@@ -488,7 +488,7 @@ export default function Header() {
             <Link 
               to="/blog" 
               onClick={closeMobileMenu}
-              className={`block py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
+              className={`block py-2 px-2 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
             >
               {translate('blog')}
             </Link>
@@ -497,16 +497,16 @@ export default function Header() {
             <Link 
               to="/contact" 
               onClick={closeMobileMenu}
-              className={`block py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
+              className={`block py-2 px-2 rounded-lg font-semibold transition-colors duration-200 ${isDarkMode ? 'text-white hover:bg-gray-800' : 'text-black hover:bg-gray-100'}`}
             >
               {translate('contactUs')}
             </Link>
 
             {/* User Profile */}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 px-4">
-                <div className="w-8 h-8 bg-[#FF4D00] rounded-full flex items-center justify-center text-white font-bold text-sm">{initials}</div>
-                <span className={`font-medium ${isDarkMode ? 'text-white' : 'text-black'}`}>{translate('userProfile')}</span>
+            <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-2 px-2">
+                <div className="w-7 h-7 bg-[#FF4D00] rounded-full flex items-center justify-center text-white font-bold text-xs">{initials}</div>
+                <span className={`font-medium text-sm ${isDarkMode ? 'text-white' : 'text-black'}`}>{translate('userProfile')}</span>
               </div>
             </div>
           </div>

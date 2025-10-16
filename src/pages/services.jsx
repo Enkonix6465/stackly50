@@ -232,9 +232,9 @@ function SafetyStandardsFollowed() {
   ];
   return (
     <section className="w-full py-16 px-4 bg-orange-50" dir={isRTL ? 'rtl' : 'ltr'}>
-      <div className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${isRTL ? 'md:grid-flow-col-dense' : ''}`}>
+      <div className={`max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-stretch ${isRTL ? 'md:flex-row-reverse' : ''}`}>
         {/* Cards Section */}
-        <div className={`grid grid-cols-1 gap-6 ${isRTL ? 'md:order-2' : 'md:order-1'}`}>
+        <div className={`flex-1 flex flex-col gap-6 justify-center ${isRTL ? 'md:order-2' : 'md:order-1'}`}>
           <h2 className={`text-3xl md:text-4xl font-bold mb-8 text-[#FF4D00] ${isRTL ? 'text-right' : 'text-left'}`}>{translate('safetyStandardsFollowed')}</h2>
           {standards.map((item, idx) => (
             <div key={idx} className={`bg-white rounded-xl shadow-md p-6 flex flex-col gap-2 ${isRTL ? 'border-r-4 border-[#FF4D00]' : 'border-l-4 border-[#FF4D00]'}`}>
@@ -244,8 +244,8 @@ function SafetyStandardsFollowed() {
           ))}
         </div>
         {/* Image Section */}
-        <div className={`flex justify-center items-center ${isRTL ? 'md:order-1' : 'md:order-2'}`}>
-          <img src={safetyImg} alt="Safety Standards" className="w-full max-w-md rounded-2xl shadow-2xl object-cover" />
+        <div className={`flex-1 flex justify-center items-center ${isRTL ? 'md:order-1' : 'md:order-2'}`}>
+          <img src={safetyImg} alt="Safety Standards" className="w-full h-full max-h-[500px] rounded-2xl shadow-2xl object-cover" style={{aspectRatio:'1.2', objectFit:'cover'}} />
         </div>
       </div>
     </section>

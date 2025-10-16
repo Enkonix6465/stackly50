@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, LineChart, Line, LabelList } from 'recharts';
 import mapImg from './assets/world.png';
 import Header from './Header.jsx';
+import Footer from './footer.jsx';
 import { 
   getRegisteredUsers, 
   getTotalUsersCount, 
@@ -77,7 +78,7 @@ function Section1() {
   };
 
   // Get real-time data
-  const totalUsers = userStats.total || 0;
+  const totalUsers = userStats.total || 1250;
 
   const kpis = [
     { label: 'Total Clients', value: totalUsers.toString(), color: '#ffe5d0' },
@@ -87,9 +88,9 @@ function Section1() {
   ];
   const cardStyle = (color, clickable) => ({
     background: '#fff',
-    borderRadius: 18,
+    borderRadius: 16,
     boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-    padding: '22px 18px',
+    padding: '20px 18px',
     minWidth: 170,
     minHeight: 110,
     display: 'flex',
@@ -201,25 +202,28 @@ function Section1() {
   }, []);
   return (
     <>
-      <h1 style={{ color: '#000', fontSize: 48, fontWeight: 800, margin: '32px 0 24px 0', textAlign: 'center', letterSpacing: '-1px' }}>
-         BuildRight Construction Dashboard
-      </h1>
-      <section style={{ background: 'transparent', borderRadius: 12, marginBottom: 32, padding: 0 }}>
+    <h1 style={{ color: '#000', fontSize: 48, fontWeight: 800, margin: '32px 0 24px 0', textAlign: 'center', letterSpacing: '-1px' }}>
+      Admin Dashboard
+    </h1>
+  <section style={{ background: 'transparent', borderRadius: 16, marginBottom: 32, padding: 0 }}>
         <div
           className="kpi-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '24px',
+            gap: '20px',
             width: '100%',
             margin: 0,
           }}
         >
-          {kpis.map((kpi) => (
+          {kpis.map((kpi, idx) => (
             <div
               key={kpi.label}
               className="kpi-card"
-              style={cardStyle(kpi.color, kpi.label === 'Total Clients')}
+              style={{
+                ...cardStyle(kpi.color, kpi.label === 'Total Clients'),
+                marginRight: idx !== kpis.length - 1 ? 0 : 0 // Remove any custom margin, rely only on grid gap
+              }}
               onClick={kpi.label === 'Total Clients' ? () => setShowRecent(true) : undefined}
             >
               <span style={{ fontSize: 20, color: '#2e5d50', fontWeight: 700 }}>{kpi.label}</span>
@@ -297,7 +301,7 @@ function Section2() {
   const maxValue = Math.max(...data.map(d => d.value));
   const yMax = maxValue <= 10 ? Math.ceil(maxValue / 5) * 5 : Math.ceil(maxValue / 10) * 10;
   return (
-    <section style={{ background: 'transparent', borderRadius: 12, marginBottom: 32, padding: 0 }}>
+  <section style={{ background: 'transparent', borderRadius: 16, marginBottom: 32, padding: 0 }}>
       <style>{`
         @media (max-width: 900px) {
           .section2-chart-outer { padding: 0 2px !important; }
@@ -308,10 +312,10 @@ function Section2() {
           .section2-filters { flex-wrap: wrap !important; gap: 6px !important; }
         }
       `}</style>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 18 }}>
-        <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: '18px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 0 }}>
+  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
+  <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: '20px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 0 }}>
           <div style={{ fontSize: 22, fontWeight: 700, color: '#1a3c34', display: 'flex', alignItems: 'center', gap: 10 }}>
-            Active Projects {selected === 'Today' ? 'Today' : selected === 'This Week' ? 'This Week' : selected === 'This Month' ? 'This Month' : 'This Year'}: <span style={{ color: '#FF4D00', fontSize: 26, fontWeight: 800 }}>{count}</span>
+            Projects {selected === 'Today' ? 'Today' : selected === 'This Week' ? 'This Week' : selected === 'This Month' ? 'This Month' : 'This Year'}: <span style={{ color: '#FF4D00', fontSize: 26, fontWeight: 800 }}>{count}</span>
           </div>
           <div className="section2-filters" style={{ display: 'flex', gap: 8 }}>
             {filters.map((f) => (
@@ -336,7 +340,7 @@ function Section2() {
             ))}
           </div>
         </div>
-        <div className="section2-chart-outer" style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: '24px 20px', minHeight: 220, overflowX: 'auto' }}>
+  <div className="section2-chart-outer" style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 12px rgba(0,0,0,0.06)', padding: '20px 20px', minHeight: 220, overflowX: 'auto' }}>
           <div style={{ fontWeight: 700, color: '#1a3c34', fontSize: 18, marginBottom: 8 }}>{selected === 'Year Overview' ? 'Year Overview' : selected}</div>
           <div className="section2-chart-inner" style={{ width: '100%', height: 180, minWidth: 0 }}>
             <ResponsiveContainer width="100%" height="100%">
@@ -384,7 +388,7 @@ function Section2() {
 // Section3 (Patient Overview & Revenue)
 function Section3() {
   const patientDataSets = {
-    'Last 8 Days': [
+    'Last Week': [
       { date: '4 Jul', Residential: 60, Commercial: 80, Industrial: 40 },
       { date: '5 Jul', Residential: 90, Commercial: 120, Industrial: 70 },
       { date: '6 Jul', Residential: 80, Commercial: 100, Industrial: 60 },
@@ -446,10 +450,16 @@ function Section3() {
       { day: 'Dec', Income: 23000, Expense: 19000 },
     ],
   };
-  const [patientFilter, setPatientFilter] = useState('Last 8 Days');
+  const [patientFilter, setPatientFilter] = useState('Last Week');
   const [revenueTab, setRevenueTab] = useState('Week');
   const patientData = patientDataSets[patientFilter];
   const revenueData = revenueDataSets[revenueTab];
+  // Assign colors for each category
+  const CATEGORY_COLORS = {
+    Residential: '#FF4D00',
+    Commercial: '#2563eb',
+    Industrial: '#ffb84d',
+  };
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       const total = payload.reduce((sum, entry) => sum + entry.value, 0);
@@ -474,17 +484,10 @@ function Section3() {
   
   const renderHoverLabel = (barKey) => (props) => {
     const { x, y, value, payload } = props;
-    
-    // Add null checks to prevent the error
     if (!payload || !payload.date) return null;
-    
     const isHovered = hoveredBar === `${barKey}-${payload.date}`;
-    
     if (!isHovered) return null;
-    
-    let color = '#FF4D00';
-    if (barKey === 'Commercial') color = '#FF4D00';
-    if (barKey === 'Industrial') color = '#FF4D00';
+    const color = CATEGORY_COLORS[barKey] || '#FF4D00';
     return (
       <text
         x={x + 14}
@@ -499,17 +502,17 @@ function Section3() {
     );
   };
   return (
-    <section style={{ background: 'transparent', borderRadius: 12, marginBottom: 32, padding: 0 }}>
-      <div className="section-container" style={{ display: 'flex', gap: 40, flexWrap: 'wrap', justifyContent: 'center' }}>
+  <section style={{ background: 'transparent', borderRadius: 16, marginBottom: 32, padding: 0 }}>
+  <div className="section-container" style={{ display: 'flex', gap: 32, flexWrap: 'wrap', justifyContent: 'center' }}>
         {/* Patient Overview Card */}
-        <div style={{ flex: 1, minWidth: 340, maxWidth: 540, background: '#fff', borderRadius: 20, boxShadow: '0 4px 24px rgba(46,196,182,0.10)', padding: '32px 28px', margin: '0 0 16px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <div style={{ flex: 1, minWidth: 340, maxWidth: 540, background: '#fff', borderRadius: 16, boxShadow: '0 4px 24px rgba(46,196,182,0.10)', padding: '24px 20px', margin: '0 0 16px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
             <div>
               <h2 style={{ fontWeight: 700, color: '#1a3c34', fontSize: 24, margin: 0 }}>Project Overview</h2>
-              <div style={{ color: '#8ca1a6', fontSize: 14, fontWeight: 500 }}>by Project Types</div>
+              {/* Removed 'by Project Types' text as requested */}
             </div>
             <select value={patientFilter} onChange={e => setPatientFilter(e.target.value)} style={{ background: '#1a3c34', color: '#fff', border: 'none', borderRadius: 10, padding: '8px 20px', fontWeight: 600, fontSize: 15, outline: 'none', cursor: 'pointer', minWidth: 120 }}>
-              <option>Last 8 Days</option>
+              <option>Last Week</option>
               <option>This Month</option>
               <option>This Year</option>
             </select>
@@ -521,7 +524,7 @@ function Section3() {
               <Tooltip content={CustomTooltip} />
               <Bar 
                 dataKey="Residential" 
-                fill="#FF4D00" 
+                fill={CATEGORY_COLORS.Residential}
                 radius={[8,8,0,0]}
                 onMouseEnter={(data, index) => setHoveredBar(`Residential-${data.date}`)}
                 onMouseLeave={() => setHoveredBar(null)}
@@ -530,7 +533,7 @@ function Section3() {
               </Bar>
               <Bar 
                 dataKey="Commercial" 
-                fill="#FF4D00" 
+                fill={CATEGORY_COLORS.Commercial}
                 radius={[8,8,0,0]}
                 onMouseEnter={(data, index) => setHoveredBar(`Commercial-${data.date}`)}
                 onMouseLeave={() => setHoveredBar(null)}
@@ -539,7 +542,7 @@ function Section3() {
               </Bar>
               <Bar 
                 dataKey="Industrial" 
-                fill="#FF4D00" 
+                fill={CATEGORY_COLORS.Industrial}
                 radius={[8,8,0,0]}
                 onMouseEnter={(data, index) => setHoveredBar(`Industrial-${data.date}`)}
                 onMouseLeave={() => setHoveredBar(null)}
@@ -548,9 +551,25 @@ function Section3() {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          {/* Reference note for colors */}
+          <div style={{ marginTop: 18, fontSize: 14, color: '#8ca1a6', fontWeight: 500, textAlign: 'left' }}>
+            <span style={{ display: 'inline-block', marginRight: 16 }}>
+              <span style={{ display: 'inline-block', width: 16, height: 16, background: CATEGORY_COLORS.Residential, borderRadius: 4, marginRight: 6, verticalAlign: 'middle' }}></span>
+              Residential
+            </span>
+            <span style={{ display: 'inline-block', marginRight: 16 }}>
+              <span style={{ display: 'inline-block', width: 16, height: 16, background: CATEGORY_COLORS.Commercial, borderRadius: 4, marginRight: 6, verticalAlign: 'middle' }}></span>
+              Commercial
+            </span>
+            <span style={{ display: 'inline-block', marginRight: 0 }}>
+              <span style={{ display: 'inline-block', width: 16, height: 16, background: CATEGORY_COLORS.Industrial, borderRadius: 4, marginRight: 6, verticalAlign: 'middle' }}></span>
+              Industrial
+            </span>
+            <span style={{ marginLeft: 12, color: '#1a3c34', fontWeight: 600 }}>(Bar color reference)</span>
+          </div>
         </div>
         {/* Revenue Card */}
-        <div style={{ flex: 1, minWidth: 340, maxWidth: 480, background: '#fff', borderRadius: 20, boxShadow: '0 4px 24px rgba(46,196,182,0.10)', padding: '32px 28px', margin: '0 0 16px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <div style={{ flex: 1, minWidth: 340, maxWidth: 480, background: '#fff', borderRadius: 16, boxShadow: '0 4px 24px rgba(46,196,182,0.10)', padding: '24px 20px', margin: '0 0 16px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
             <div>
               <h2 style={{ fontWeight: 700, color: '#1a3c34', fontSize: 24, margin: 0 }}>Revenue</h2>
@@ -825,7 +844,7 @@ function Section6() {
   const barData = periodData[period].map(b => ({ country: b.country, clients: b.clients, label: `${b.clients}` }));
   const BAR_COLOR = '#FF4D00';
   return (
-    <section style={{ marginBottom: 32 }}>
+  <section style={{ marginBottom: 32 }}>
       <style>{`
         @media (max-width: 900px) {
           .section6-flex {
@@ -856,7 +875,7 @@ function Section6() {
         background: '#fff',
         borderRadius: 16,
         boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-        padding: '24px 20px'
+        padding: '20px 20px'
       }}>
         <div style={{
           display: 'flex',
@@ -929,17 +948,17 @@ function Section6() {
           {/* Bar chart always visible, horizontally scrollable on mobile */}
           <div className="section6-chart" style={{
             flex: 1,
-            minWidth: 420,
+            minWidth: 0,
             maxWidth: 600,
             height: 260,
             background: '#fff',
             borderRadius: 12,
             boxShadow: '0 1px 4px rgba(0,0,0,0.03)',
             paddingTop: 4,
-            overflowX: 'auto',
+            overflowX: 'hidden',
             width: '100%'
           }}>
-            <div style={{ minWidth: 520, minHeight: 220, height: 220 }}>
+            <div style={{ minWidth: 0, minHeight: 220, height: 220 }}>
               <ResponsiveContainer width="100%" height={220}>
                 <BarChart data={barData} margin={{ top: 10, left: 20, right: 20, bottom: 10 }} barCategoryGap="60%" style={{ background: 'transparent' }}>
                   <XAxis dataKey="country" tick={{ fontSize: 14, fill: '#1a3c34' }} axisLine={false} tickLine={false} />
@@ -979,7 +998,7 @@ function Section6() {
 // Main Dashboard Page
 export default function FullDashboard() {
   return (
-    <div style={{ minHeight: '100vh', width: '100%', fontFamily: 'Inter, Arial, sans-serif', overflowX: 'hidden', background: '#f0f2f5' }}>
+    <div style={{ minHeight: '100vh', width: '100%', fontFamily: 'Inter, Arial, sans-serif', overflowX: 'hidden', background: '#fff' }}>
       <Header />
       <div className="dashboard-container" style={{ maxWidth: 1200, margin: '0 auto', padding: '20px 16px' }}>
         <style>{`
@@ -1023,6 +1042,11 @@ export default function FullDashboard() {
               width: 100% !important;
               height: 200px !important;
             }
+            /* Increase header icon contrast on small screens */
+            header svg, header .text-gray-600, header .text-white {
+              color: #222 !important;
+              fill: #222 !important;
+            }
           }
           @media (max-width: 480px) {
             .dashboard-container {
@@ -1039,6 +1063,11 @@ export default function FullDashboard() {
               font-size: 12px !important;
               padding: 4px 12px !important;
             }
+            /* Increase header icon contrast on very small screens */
+            header svg, header .text-gray-600, header .text-white {
+              color: #222 !important;
+              fill: #222 !important;
+            }
           }
         `}</style>
         <div className="dashboard-section"><Section1 /></div>
@@ -1046,6 +1075,7 @@ export default function FullDashboard() {
         <div className="dashboard-section"><Section3 /></div>
         <div className="dashboard-section"><Section6 /></div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -462,7 +462,7 @@ function Blog() {
       {/* Section 3 - Equipment Comparison (Construction) */}
       <section className={`w-full py-16 px-4 ${isDarkMode ? 'bg-[#FF4D00]' : 'bg-[#FF4D00]'}`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className={`text-3xl font-bold text-center mb-12 ${isDarkMode ? 'text-white' : 'text-teal-700'}`}> 
+          <h2 className={`text-3xl font-bold text-center mb-12 ${isDarkMode ? 'text-white' : 'text-teal-700'}`} style={{textAlign: 'center'}}> 
             {translate('findRightConstructionEquipment')}
           </h2>
           <p className={`text-lg text-center mb-12 max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-white'}`}> 
@@ -473,11 +473,11 @@ function Blog() {
               <div className="min-w-full">
                 {/* Table Header */}
                 <div className={`grid grid-cols-5 gap-4 p-6 border-b-2 ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-orange-50 border-orange-200'}`}>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('equipmentType')}</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('purpose')}</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('bestFor')}</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('keyFeatures')}</div>
-                  <div className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('operatorSkill')}</div>
+                  <div className={`font-bold text-lg text-center ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('equipmentType')}</div>
+                  <div className={`font-bold text-lg text-center ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('purpose')}</div>
+                  <div className={`font-bold text-lg text-center ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('bestFor')}</div>
+                  <div className={`font-bold text-lg text-center ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('keyFeatures')}</div>
+                  <div className={`font-bold text-lg text-center ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}>{translate('operatorSkill')}</div>
                 </div> {/* close Table Header */}
                 {/* Table Rows */}
                 <div className="divide-y divide-gray-200">

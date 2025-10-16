@@ -91,9 +91,6 @@ export default function Welcome() {
       phoneNumber: "رقم الهاتف",
       password: "كلمة المرور",
       logIn: "تسجيل الدخول",
-      forgotPassword: "نسيت كلمة المرور؟",
-      alreadyHaveAccount: "لديك حساب بالفعل؟",
-      dontHaveAccount: "ليس لديك حساب؟",
       registerHere: "سجل هنا",
       enterFirstName: "أدخل اسمك الأول",
       enterLastName: "أدخل اسمك الأخير",
@@ -299,10 +296,13 @@ export default function Welcome() {
 
   return (
     <div
-      className={`min-h-screen flex items-center justify-start bg-cover bg-center pt-4 ${isRTL ? 'rtl' : 'ltr'}`}
+      className={`min-h-screen flex items-center justify-center bg-cover bg-center pt-4 ${isRTL ? 'rtl' : 'ltr'}`}
       style={{ backgroundImage: `url(${background})`, direction: isRTL ? 'rtl' : 'ltr' }}
     >
-  <div className={`w-full max-w-md rounded-xl px-2 shadow-2xl relative`} style={{marginLeft: 0}}>
+      <div
+        className={`w-full max-w-md rounded-xl px-2 shadow-2xl relative`}
+        style={{ marginLeft: 0, background: theme === 'dark' ? 'rgba(30,30,30,0.92)' : 'rgba(255,255,255,0.92)' }}
+      >
         <div className="flex justify-center mb-8">
           <img src={logo} alt="Stackly Logo" className="h-16 w-auto" />
         </div>
@@ -364,15 +364,15 @@ export default function Welcome() {
         </button>
         {showSignup ? (
           <>
-            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-white"}`}>{t.signUp}</h2>
-            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-gray-200"}`}>{t.createAccount}</p>
+            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-black"}`}>{t.signUp}</h2>
+            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-black"}`}>{t.createAccount}</p>
             <form className="space-y-5" onSubmit={handleSignup}>
               {/* First Name */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.firstName}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.firstName}</label>
                 <input
                   type="text"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterFirstName}
                   value={firstName}
                   onChange={e => setFirstName(e.target.value)}
@@ -381,10 +381,10 @@ export default function Welcome() {
               </div>
               {/* Last Name */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.lastName}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.lastName}</label>
                 <input
                   type="text"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterLastName}
                   value={lastName}
                   onChange={e => setLastName(e.target.value)}
@@ -393,10 +393,10 @@ export default function Welcome() {
               </div>
               {/* Email */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
                 <input
                   type="email"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterEmail}
                   value={email}
                   onChange={e => setEmail(e.target.value)}
@@ -405,10 +405,10 @@ export default function Welcome() {
               </div>
               {/* Phone Number */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.phoneNumber}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.phoneNumber}</label>
                 <input
                   type="tel"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 placeholder-black focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterPhoneNumber}
                   value={phone}
                   onChange={e => setPhone(e.target.value)}
@@ -416,10 +416,10 @@ export default function Welcome() {
               </div>
               {/* Password */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.password}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.password}</label>
                 <input
                   type="password"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 placeholder-black focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterPassword}
                   value={password}
                   onChange={e => setPassword(e.target.value)}
@@ -435,7 +435,7 @@ export default function Welcome() {
                 {t.signUp}
               </button>
             </form>
-            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-white/80"}`}>
+            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-black"}`}>
               {t.alreadyHaveAccount}{" "}
               <a href="#" className="font-medium hover:underline" style={{color: '#FF4D00'}} onClick={e => { e.preventDefault(); setShowSignup(false); }}>
                 {t.logIn}
@@ -444,15 +444,15 @@ export default function Welcome() {
           </>
         ) : showForgot ? (
           <>
-            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-white"}`}>{t.forgotPasswordTitle}</h2>
-            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-gray-200"}`}>{t.forgotPasswordDesc}</p>
+            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-black"}`}>{t.forgotPasswordTitle}</h2>
+            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-black"}`}>{t.forgotPasswordDesc}</p>
             {forgotStep === 1 && (
               <form className="space-y-5" onSubmit={handleForgotEmail}>
                 <div>
-                  <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
+                  <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
                   <input
                     type="email"
-                    className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                    className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                     placeholder={t.enterEmail}
                     value={forgotEmail}
                     onChange={e => setForgotEmail(e.target.value)}
@@ -469,7 +469,7 @@ export default function Welcome() {
                   <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.newPassword}</label>
                   <input
                     type="password"
-                    className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                    className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                     placeholder={t.enterNewPassword}
                     value={newPass}
                     onChange={e => setNewPass(e.target.value)}
@@ -480,7 +480,7 @@ export default function Welcome() {
                   <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.confirmPassword}</label>
                   <input
                     type="password"
-                    className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                    className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                     placeholder={t.confirmNewPassword}
                     value={confirmPass}
                     onChange={e => setConfirmPass(e.target.value)}
@@ -492,7 +492,7 @@ export default function Welcome() {
                 {forgotSuccess && <p className="text-green-500 text-center mt-2">{forgotSuccess}</p>}
               </form>
             )}
-            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-white/80"}`}>
+            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-black"}`}>
               <a href="#" className="font-medium hover:underline" style={{color: '#FF4D00'}} onClick={e => { e.preventDefault(); setShowForgot(false); setForgotStep(1); setForgotEmail(""); setForgotError(""); }}>
                 {t.backToLogin}
               </a>
@@ -500,15 +500,15 @@ export default function Welcome() {
           </>
         ) : (
           <>
-            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-white"}`}>{t.welcomeBack}</h2>
-            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-gray-200"}`}>{t.pleaseEnterDetails}</p>
+            <h2 className={`text-3xl font-bold mb-2 text-center ${theme === "dark" ? "text-white" : "text-black"}`}>{t.welcomeBack}</h2>
+            <p className={`mb-8 text-center ${theme === "dark" ? "text-gray-300" : "text-black"}`}>{t.pleaseEnterDetails}</p>
             <form className="space-y-5" onSubmit={handleLogin}>
               {/* Email */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.email}</label>
                 <input
                   type="email"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                  className={`w-full border rounded-lg px-4 py-3 placeholder-black focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterEmail}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -517,10 +517,10 @@ export default function Welcome() {
               </div>
               {/* Password */}
               <div>
-                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-white"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.password}</label>
+                <label className={`block mb-1 font-medium ${theme === "dark" ? "text-white" : "text-black"} ${isRTL ? 'text-right' : 'text-left'}`}>{t.password}</label>
                 <input
                   type="password"
-                  className={`w-full border rounded-lg px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#FF4D00] ${theme === "dark" ? "bg-gray-800 text-white border-gray-600" : "bg-white/20 text-white border-white/30"} ${isRTL ? 'text-right' : 'text-left'}`}
+                    className={`w-full border rounded-lg px-4 py-3 ${theme === "dark" ? "placeholder-white/60 bg-gray-800 text-white border-gray-600" : "placeholder-black bg-white/20 text-black border-black"} ${isRTL ? 'text-right' : 'text-left'}`}
                   placeholder={t.enterPassword}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -542,7 +542,7 @@ export default function Welcome() {
               </a>
             </div>
             {loginError && <p className="text-red-400 text-center mt-2">{loginError}</p>}
-            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-white/80"}`}>
+            <p className={`text-center text-sm mt-8 ${theme === "dark" ? "text-gray-300" : "text-black"}`}>
               {t.dontHaveAccount}{" "}
               <a href="#" className="font-medium hover:underline" style={{color: '#FF4D00'}} onClick={e => { e.preventDefault(); setShowSignup(true); }}>
                 {t.registerHere}

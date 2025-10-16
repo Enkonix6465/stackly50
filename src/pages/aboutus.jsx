@@ -318,61 +318,30 @@ function OurGrowthThroughYears({ isDarkMode }) {
                  <div className="relative">
            <div className="space-y-16">
              {milestones.map((milestone, index) => {
-                // Assign specific images for each milestone card based on index
-                const getCardImage = (index) => {
-                  switch(index) {
-                    case 0: return g1; // Foundation Laid
-                    case 1: return g2; // Commercial Growth
-                    case 2: return g3; // Technological Innovation
-                    case 3: return g4; // Industry Leadership
-                    case 4: return g5; // Future Vision
-                    default: return g1;
-                  }
-                };
-                const cardImg = getCardImage(index);
                 // Define years for each milestone
                 const years = ['2000', '2010', '2015', '2020', '2025'];
                 const year = years[index] || '2000';
                 const isBlackCircle = year === '2010' || year === '2020';
+                // Year-specific content for each milestone
+                const yearContent = {
+                  '2000': 'We laid the foundation of our company, focusing on quality and reliability in every project.',
+                  '2010': 'Expanded into commercial construction, building strong partnerships and a reputation for excellence.',
+                  '2015': 'Embraced technological innovation, integrating new tools and methods to improve efficiency.',
+                  '2020': 'Achieved industry leadership, recognized for our commitment to safety and sustainability.',
+                  '2025': 'Looking to the future, we continue to grow with a vision for smarter, greener construction.'
+                };
                 return (
-                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                    {/* Image Card */}
-                    <div className="flex-1 p-0 h-48 w-full">
-                      <div className={`rounded-2xl shadow-lg relative overflow-hidden w-full h-full ${
-                        isDarkMode 
-                          ? (milestone.color === 'bg-[#FF4D00]' ? 'bg-[#FF4D00] text-white' : 'bg-black text-white')
-                          : milestone.color
-                      }`}>
-                        <img 
-                          src={cardImg} 
-                          alt={milestone.title}
-                          className="w-full h-full object-cover" 
-                          style={{borderRadius: 'inherit'}}
-                        />
-                      </div>
-                    </div>
-                    {/* Timeline Square with Number and Label */}
-                    <div className={`hidden lg:flex flex-col items-center justify-center w-44 h-44 shadow-lg z-10 relative scroll-animate-scale ${
+                  <div key={index} className={`flex items-center justify-center py-8`}> 
+                    <div className={`flex flex-col items-center justify-center w-full lg:w-2/3 mx-auto p-8 rounded-2xl shadow-lg ${
                       isDarkMode 
-                        ? (isBlackCircle ? 'bg-black' : 'bg-[#FF4D00]')
-                        : (isBlackCircle ? 'bg-gray-600' : 'bg-[#FF4D00]')
-                    }`} style={{ borderTopLeftRadius: '3rem', borderBottomRightRadius: '3rem' }}>
-                      <div className="text-xl font-bold text-white">{year}</div>
-                      <div className="text-xs font-semibold text-white mt-1">
-                        {(() => {
-                          switch (year) {
-                            case '2000': return translate('timelineFoundation');
-                            case '2010': return translate('timelineGrowth');
-                            case '2015': return translate('timelineInnovation');
-                            case '2020': return translate('timelineLeadership');
-                            case '2025': return translate('timelineFuture');
-                            default: return translate('timelineGrowth');
-                          }
-                        })()}
-                      </div>
+                        ? (isBlackCircle ? 'bg-black text-white' : 'bg-[#FF4D00] text-white')
+                        : (isBlackCircle ? 'bg-gray-600 text-white' : 'bg-[#FF4D00] text-white')
+                    }`}>
+                      <div className="text-3xl font-bold mb-2">{year}</div>
+                      <div className="text-lg font-semibold mb-2">{milestone.title}</div>
+                      <div className="text-base mb-2">{yearContent[year]}</div>
+                      <div className="text-sm opacity-80">{milestone.description}</div>
                     </div>
-                    {/* Spacer for mobile */}
-                    <div className="lg:hidden flex-1"></div>
                   </div>
                 );
              })}
