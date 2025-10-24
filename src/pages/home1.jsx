@@ -32,12 +32,12 @@ function Hero({ isDarkMode }) {
   };
 
   return (
-  <section
-    ref={elementRef}
-    className={`w-full h-screen relative overflow-hidden flex flex-col items-center justify-center px-4 text-center transition-all duration-1000 ease-out ${
-      isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-    }`}
-  >
+    <section
+      ref={elementRef}
+      className={`w-full h-screen relative overflow-hidden flex flex-col items-center justify-center px-4 text-center transition-all duration-1000 ease-out ${
+        isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+      }`}
+    >
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -53,26 +53,31 @@ function Hero({ isDarkMode }) {
         }}
       />
       {/* Content */}
-  <div className={`relative z-20 flex flex-col pt-20 items-center text-center justify-center`}>
-        <h1 className={`pt-2 text-6xl md:text-7xl font-extrabold text-white mb-8 drop-shadow transition-all duration-1000 ease-out ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-        }`} style={{textAlign: 'center'}}>
+      <div className="relative z-20 flex flex-col pt-20 items-center justify-center w-full">
+        <h1
+          className={`pt-2 text-6xl md:text-7xl font-extrabold text-white mb-8 drop-shadow transition-all duration-1000 ease-out ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+          } w-full text-center`}
+        >
           {translate('buildingYourFuture')}
         </h1>
-        <p className={`text-2xl md:text-3xl text-white mb-12 max-w-2xl transition-all duration-1000 ease-out delay-300 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-        }`} style={{textAlign: 'center'}}>
+        <p
+          className={`text-2xl md:text-3xl text-white mb-12 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-300 ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+          } w-full text-center`}
+        >
           {translate('heroDescription')}
         </p>
-        <button 
+        <button
           onClick={scrollToWhoWeAre}
           className={`font-semibold px-12 py-5 rounded-full shadow transition-all duration-1000 ease-out delay-500 transform hover:scale-105 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
           } text-xl ${
-            isDarkMode 
-              ? 'bg-black text-white hover:bg-gray-800' 
+            isDarkMode
+              ? 'bg-black text-white hover:bg-gray-800'
               : 'bg-[#FF4D00] text-white hover:bg-orange-700'
-          }`}>
+          }`}
+        >
           {translate('exploreOurServices')}
         </button>
       </div>
@@ -526,13 +531,15 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900' : 'bg-[#f6fffd]'} ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
-      <Hero isDarkMode={isDarkMode} />
-      <WhoWeAre isDarkMode={isDarkMode} />
-      <ServicesOverview isDarkMode={isDarkMode} />
-      <ImpactMetrics isDarkMode={isDarkMode} />
-      <QuickTestimonialsPreview isDarkMode={isDarkMode} />
-      <CallToActionBanner isDarkMode={isDarkMode} />
-      <Footer />
+      <div className="max-h-screen">
+        <Hero isDarkMode={isDarkMode} />
+        <WhoWeAre isDarkMode={isDarkMode} />
+        <ServicesOverview isDarkMode={isDarkMode} />
+        <ImpactMetrics isDarkMode={isDarkMode} />
+        <QuickTestimonialsPreview isDarkMode={isDarkMode} />
+        <CallToActionBanner isDarkMode={isDarkMode} />
+        <Footer />
+      </div>
     </div>
   );
 }

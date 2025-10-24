@@ -84,8 +84,7 @@ const RoadConstruction = () => {
       <Header />
       
      {/* Hero Section */}
-      {/* Hero Section */}
-      <section className="w-full h-screen flex items-center justify-start px-4 sm:px-6 md:px-8 lg:px-16 relative overflow-hidden max-w-full">
+      <section className="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 relative overflow-hidden max-w-full">
         <video 
           autoPlay 
           muted 
@@ -96,14 +95,14 @@ const RoadConstruction = () => {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className={`relative z-10 max-w-4xl px-4 w-full ${isRTL ? 'text-right' : 'text-left'}`}>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight ${isRTL ? 'text-right' : 'text-left'}`} data-aos="fade-up">
+        <div className="relative z-10 max-w-4xl w-full pt-20 text-center"> 
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight" data-aos="fade-up">
             {translate('roadHeroTitle')} <span className='text-[#FF4D00]'>{translate('roadHeroTitleHighlight')}</span>
           </h1>
-          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mb-8 sm:mb-10 max-w-4xl leading-relaxed ${isRTL ? 'text-right' : 'text-left'}`} data-aos="fade-up" data-aos-delay="200">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             {translate('roadHeroDescription')}
           </p>
-          <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
+          <div className="flex justify-center">
             <button className="bg-white text-[#FF4D00] font-semibold px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full shadow-lg hover:bg-gray-100 transition text-base sm:text-lg md:text-xl transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
               {translate('learnMoreAboutConstruction')}
             </button>

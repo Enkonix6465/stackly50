@@ -4,6 +4,16 @@ import logo from "./assets/logo.png";
 import { useLanguage } from "./contexts/LanguageContext";
 
 export default function Header() {
+  // Check if admin is logged in
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    try {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      setIsAdmin(currentUser && currentUser.role === 'admin');
+    } catch (e) {
+      setIsAdmin(false);
+    }
+  }, []);
   const navigate = useNavigate();
   const { currentLanguage, isRTL, translate, changeLanguage } = useLanguage();
   const [homeDropdown, setHomeDropdown] = useState(false);
@@ -317,10 +327,17 @@ export default function Header() {
             {isAvatarDropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
                 <div className="py-2">
-                  <div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-100">
-                    <div className="font-medium">User Profile</div>
-                    <div className="text-gray-500 text-xs">Signed in</div>
-                  </div>
+                  {isAdmin && (
+                    <button
+                      onClick={() => { setIsAvatarDropdownOpen(false); navigate('/admin-dashboard'); }}
+                      className="w-full text-left px-4 py-2 text-sm text-[#FF4D00] hover:bg-orange-50 transition-colors duration-200 flex items-center border-b border-gray-100"
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18M3 6h18M3 18h18" />
+                      </svg>
+                      Admin Dashboard
+                    </button>
+                  )}
                   <button
                     onClick={handleLogout}
                     className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 flex items-center"

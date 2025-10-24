@@ -7,9 +7,9 @@ function ConstructionCTA() {
   };
   return (
     <section className="w-full py-20 px-4 bg-[#FF4D00]" dir={isRTL ? 'rtl' : 'ltr'}>
-      <div className={`max-w-5xl mx-auto ${isRTL ? 'text-center' : 'text-center'}`}>
-        <h2 className={`text-4xl md:text-5xl font-bold mb-6 text-white ${isRTL ? 'text-center' : 'text-center'}`}>{translate('readyToBuildVision')}</h2>
-        <p className={`text-xl text-white/90 mb-8 ${isRTL ? 'text-center' : 'text-center'}`}>{translate('ctaDescription')}</p>
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white text-center">{translate('readyToBuildVision')}</h2>
+        <p className="text-xl text-white/90 mb-8 text-center">{translate('ctaDescription')}</p>
         <button
           onClick={handleContact}
           className={`bg-white text-[#FF4D00] font-semibold px-10 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition-all duration-300 text-lg ${isRTL ? 'text-center' : 'text-center'}`}

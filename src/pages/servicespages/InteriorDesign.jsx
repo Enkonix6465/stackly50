@@ -100,7 +100,7 @@ const InteriorDesignFinishing = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className={`w-full h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16 relative overflow-hidden max-w-full ${isRTL ? 'justify-end' : 'justify-start'}`} dir={isRTL ? 'rtl' : 'ltr'}>
+      <section className="w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 relative overflow-hidden max-w-full" dir={isRTL ? 'rtl' : 'ltr'}>
         {/* Video Background */}
         <video
           autoPlay
@@ -113,14 +113,14 @@ const InteriorDesignFinishing = () => {
         </video>
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className={`relative z-10 max-w-4xl px-4 w-full ${isRTL ? 'text-right' : 'text-left'}`} dir={isRTL ? 'rtl' : 'ltr'}>
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight ${isRTL ? 'text-right' : 'text-left'}`} data-aos="fade-up">
+        <div className="relative z-10 max-w-4xl w-full text-center pt-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight" data-aos="fade-up">
             {translate('interiorHeroTitle')} <span className='text-[#FF4D00]'>{translate('interiorHeroTitleHighlight')}</span>
           </h1>
-          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mb-8 sm:mb-10 max-w-4xl leading-relaxed ${isRTL ? 'text-right' : 'text-left'}`} data-aos="fade-up" data-aos-delay="200">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
             {translate('interiorHeroDescription')}
           </p>
-          <div className={`flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
+          <div className="flex justify-center">
             <button className="bg-white text-[#FF4D00] font-semibold px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full shadow-lg hover:bg-gray-100 transition text-base sm:text-lg md:text-xl transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
               {translate('bookFreeConsultation')}
             </button>

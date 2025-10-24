@@ -59,7 +59,7 @@ function ContactUs() {
     <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'} ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
       {/* Section 1 */}
-      <section className="w-full h-screen flex flex-col items-start justify-center relative overflow-hidden px-4 sm:px-6 md:px-8 lg:px-16">
+      <section className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 sm:px-6 md:px-8 lg:px-16">
         {/* Video Background */}
         <video
           autoPlay
@@ -76,14 +76,14 @@ function ContactUs() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
-        <div className={`relative z-10 max-w-4xl ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className={`relative z-10 max-w-4xl text-center`}> 
           <h1
             className="text-4xl md:text-5xl font-bold mb-4 transition-all duration-1000 ease-out animate-fade-in-up"
             style={{ color: "#FF4D00" }}
           >
             {translate('contactConstructionTeam')}
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl text-white/90 transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1">
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/90 transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1">
             {translate('contactHeroDesc')}
           </p>
         </div>

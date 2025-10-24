@@ -332,7 +332,7 @@ const Home2 = () => {
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900' : 'bg-[#f6fffd]'} ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <Header />
       {/* Hero Section - Construction Website */}
-      <section className="w-full h-screen relative overflow-hidden flex flex-col items-start justify-center px-4 text-left">
+      <section className="w-full h-screen relative overflow-hidden flex flex-col items-center justify-center px-4 text-center">
         {/* Video Background */}
         <video 
           autoPlay 
@@ -344,13 +344,13 @@ const Home2 = () => {
           Your browser does not support the video tag.
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute items-start inset-0 bg-black bg-opacity-60"></div>
-        {/* Left-aligned Content like home1 */}
-  <div className={`relative z-20 flex flex-col pt-20 justify-center ${isRTL ? 'items-end text-right' : 'items-start text-left'}`}>
-          <h1 className="pt-2 text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow animate-fade-in-up">
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        {/* Centered Content */}
+        <div className="relative z-20 flex flex-col pt-20 items-center justify-center w-full">
+          <h1 className="pt-2 text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow animate-fade-in-up w-full text-center">
             {translate('buildingWithIntegrity')}
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-xl animate-fade-in-up-delay-3">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-xl mx-auto animate-fade-in-up-delay-3 w-full text-center">
             {translate('trustedConstruction')}<br />
             {translate('excellenceInEveryBuild')}
           </p>

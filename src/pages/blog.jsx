@@ -337,11 +337,11 @@ function Blog() {
           Your browser does not support the video tag.
         </video>
         {/* Content Overlay */}
-        <div className={`relative z-10 h-full flex flex-col ${isRTL ? 'items-end text-right' : 'items-start text-left'} justify-center px-4 sm:px-6 md:px-8 lg:px-16`}>
-          <h1 className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ease-out animate-fade-in-up ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'}`}> 
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 lg:px-16">
+          <h1 className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ease-out animate-fade-in-up ${isDarkMode ? 'text-white' : 'text-[#FF4D00]'} text-center`}> 
             {translate('constructionInsightsBlog')}
           </h1>
-          <p className={`text-xl md:text-2xl max-w-3xl transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}> 
+          <p className={`text-xl md:text-2xl max-w-3xl transition-all duration-1000 ease-out delay-300 animate-fade-in-up-delay-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-center`}> 
             {translate('blogHeroDesc')}
           </p>
         </div>

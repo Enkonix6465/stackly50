@@ -241,7 +241,10 @@ export default function Welcome() {
     e.preventDefault();
     // Check admin
     if (email === ADMIN.email && password === ADMIN.password) {
-      localStorage.setItem("currentUser", JSON.stringify(ADMIN));
+      localStorage.setItem("currentUser", JSON.stringify({
+        ...ADMIN,
+        role: 'admin'
+      }));
       navigate("/admin-dashboard");
       return;
     }
